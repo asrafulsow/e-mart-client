@@ -7,7 +7,7 @@ import 'swiper/css';
 const Banner = () => {
     return (
        
-             <Swiper
+             <Swiper className="w-3/4 h-1/2  float-right	"
              effect={"cube"}
              grabCursor={true}
              cubeEffect={{
@@ -22,39 +22,45 @@ const Banner = () => {
       onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
-      <div style={{display:'flex',justifyContent:'space-evenly',alignItems: 'center'}}>
+      <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
        <div>
-        <p>NEW CAMERA</p>
-        <p>12MP <span>F/2.3</span></p>
-        <p>8K <span>VIDEO</span></p>
-        <button className="btn btn-accent">Button</button>
+        <p className='text-5xl font-bold my-4'>NEW MOBILE</p>
+        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9">Wide</button>
        </div>
       <img src="https://i.ibb.co/NFYPH2F/slide1-electronic-1.png" alt=""/>
       </div>
      
       </SwiperSlide>
       <SwiperSlide>
-      <div style={{display:'flex',justifyContent:'space-evenly',alignItems: 'center'}}>
+      <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
-       <h1>Lets do some shopping here come on </h1>
+       <div>
+        <p className='text-5xl font-bold my-4'>NEW LAPTOP</p>
+        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold'>12K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9">Wide</button>
+       </div>
        <img src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt=""/>
       </div>
      
       </SwiperSlide>
       <SwiperSlide>
-      <div style={{display:'flex',justifyContent:'space-around',alignItems: 'center'}}>
+      <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
-       <h1>Lets do some shopping here come on </h1>
-       <img src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt=""/>
+       <div>
+        <p className='text-5xl font-bold my-4'>NEW CAMERA</p>
+        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9">Wide</button>
+       </div>
+      <img src="https://i.ibb.co/FxYgbP4/slide3-electronic1.png" alt=""/>
       </div>
      
       </SwiperSlide>
 
-
-
-      
-      
     </Swiper>
     
     );
