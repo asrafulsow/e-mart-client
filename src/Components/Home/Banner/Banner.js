@@ -12,7 +12,7 @@ const Banner = () => {
            
            <div className=" flex justify-center flex-row h-1/4 overflow-hidden p-10 ">
             {/* the first hover with navigation part will be here  */}
-<div className='basis-1/4 flex flex-col divide-y divide-gray-300 '>
+<div className='basis-1/4 flex flex-col divide-y divide-gray-300 font-mono'>
 <button className="w-full hover:bg-violet-300 text-xl border-black-600 h-12">HOT DEALS </button>
 <button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">WINTER SALE  </button>
 <button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">BLACK FRIDAY OFFER  </button>
