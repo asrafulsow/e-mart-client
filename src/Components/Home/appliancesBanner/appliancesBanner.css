@@ -1,0 +1,19 @@
+.appliancesBanner{
+    transition: ease-in-out 0.4s;
+    overflow: hidden; 
+    cursor: pointer;
+}
+.appliancesBannerImgDiv{
+    filter: brightness(100%);
+    transition: ease-in-out 0.4s;
+}
+.appliancesBanner:hover .appliancesBannerImgDiv {
+    filter: brightness(80%);
+    transform: scale(1.1); 
+}
+.appliancesShopBtn, .appliancesShopBtn2{
+    transition: ease-in-out 0.4s;
+}
+.appliancesBanner:hover .appliancesShopBtn, .appliancesBanner:hover .appliancesShopBtn2{
+    background-color: #F50000; 
+}
