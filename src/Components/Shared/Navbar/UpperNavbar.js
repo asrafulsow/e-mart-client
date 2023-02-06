@@ -1,12 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../images/logo.png";
+import { useForm } from "react-hook-form";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.config";
+import Loading from "../Loading/Loading";
+import { toast } from "react-toastify";
 
 const UpperNavbar = () => {
+  const [signInWithEmailAndPassword, eUser, eLoading, eError] =
+    useSignInWithEmailAndPassword(auth);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const onSubmit = (data) => {
+    signInWithEmailAndPassword(data.email, data.password);
+  };
+  if (eLoading) {
+    <Loading />;
+  }
+  if (eUser) {
+    toast("User Logged in successfully");
+  }
   return (
     <div className="container mx-auto p-4">
       <div className="navbar text-white">
         <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl xs:hidden">
+          <a href="/" className="btn btn-ghost normal-case text-xl xs:hidden">
             <img style={{ height: "30px" }} src={logo} alt="logo" />
           </a>
         </div>
@@ -14,7 +36,7 @@ const UpperNavbar = () => {
           <div className=" bg-white">
             <form className="flex">
               <select className="select select-category select-bordered text-black">
-                <option disabled selected>
+                <option disabled defaultValue>
                   Categories
                 </option>
                 <option>One Piece</option>
@@ -29,7 +51,7 @@ const UpperNavbar = () => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="input input-bordered "
+                  className="input input-bordered w-72"
                 />
               </div>
             </form>
@@ -37,7 +59,11 @@ const UpperNavbar = () => {
         </div>
         <div className="navbar-end">
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <label
+              htmlFor="my-modal-6"
+              tabIndex={0}
+              className="btn btn-ghost btn-circle avatar"
+            >
               <div className="w-7 rounded-full">
                 <svg
                   viewBox="0 0 32 32"
@@ -46,24 +72,109 @@ const UpperNavbar = () => {
                 >
                   <g data-name="Layer 7" id="Layer_7">
                     <path
-                      class="cls-1"
+                      className="cls-1"
                       d="M19.75,15.67a6,6,0,1,0-7.51,0A11,11,0,0,0,5,26v1H27V26A11,11,0,0,0,19.75,15.67ZM12,11a4,4,0,1,1,4,4A4,4,0,0,1,12,11ZM7.06,25a9,9,0,0,1,17.89,0Z"
                     />
                   </g>
                 </svg>
               </div>
             </label>
-            <ul
-              tabIndex={0}
-              className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-black text-white rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">Profile</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
+            <div tabIndex={0}>
+              <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+              <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                  <label
+                    htmlFor="my-modal-6"
+                    className="btn btn-sm btn-circle absolute right-2 top-2"
+                  >
+                    ✕
+                  </label>
+                  <h3 className="font-bold text-black text-lg">LOGIN</h3>
+                  <p className="py-4">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                      <div className="form-control ">
+                        <label className="label">
+                          <span className="label-text">Email</span>
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="Type Your Email"
+                          className="input input-bordered "
+                          {...register("email", {
+                            required: {
+                              value: true,
+                              message: " Email is required",
+                            },
+                            pattern: {
+                              value: /.+@.+\.[A-Za-z]+$/,
+                              message: "Provide a Valid Email",
+                            },
+                            // onBlur: (e) => setEmail(e.target.value),
+                          })}
+                        />
+                        <label className="label">
+                          {errors.email?.type === "required" && (
+                            <span className="label-text-alt text-red-600">
+                              {errors.email.message}
+                            </span>
+                          )}
+                          {errors.email?.type === "pattern" && (
+                            <span className="label-text-alt text-red-600">
+                              {errors.email.message}
+                            </span>
+                          )}
+                        </label>
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Password</span>
+                        </label>
+                        <input
+                          type="password"
+                          placeholder="Type Your Password"
+                          className="input input-bordered"
+                          {...register("password", {
+                            required: {
+                              value: true,
+                              message: " Password is required",
+                            },
+                            pattern: {
+                              value:
+                                /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/,
+                              message: "Your Password is wrong",
+                            },
+                          })}
+                        />
+                        <label className="label">
+                          {errors.password?.type === "required" && (
+                            <span className="label-text-alt text-red-500">
+                              {errors.password.message}
+                            </span>
+                          )}
+                          {errors.password?.type === "pattern" && (
+                            <span className="label-text-alt text-red-500">
+                              {errors.password.message}
+                            </span>
+                          )}
+                        </label>
+                      </div>
+                      <input
+                        type="submit"
+                        className="btn btn-accent px-6"
+                        value="Login"
+                      />
+                      <Link to="/register" className="ml-3">
+                        <input
+                          type="button"
+                          className="btn btn-accent"
+                          value="Register"
+                        />
+                      </Link>
+                    </form>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <button className="btn btn-ghost btn-circle">
             <svg
