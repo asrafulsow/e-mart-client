@@ -5,6 +5,10 @@ import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper";
 import 'swiper/css';
 import './banner.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFontAwesome , faIdeal } from '@fortawesome/free-brands-svg-icons'
+
+
 const Banner = () => {
     return (
        
@@ -13,7 +17,7 @@ const Banner = () => {
            <div className=" flex justify-center flex-row h-1/4 overflow-hidden p-10 ">
             {/* the first hover with navigation part will be here  */}
 <div className='basis-1/4 flex flex-col divide-y divide-gray-300 font-mono'>
-<button className="w-full hover:bg-violet-300 text-xl border-black-600 h-12">HOT DEALS </button>
+<button className="w-full hover:bg-violet-300 text-xl border-black-600 h-12"> <FontAwesomeIcon icon={faIdeal} className="mx-3" />HOT DEALS </button>
 <button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">WINTER SALE  </button>
 <button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">BLACK FRIDAY OFFER  </button>
 <button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">TOP PC WITH OFFER </button>
