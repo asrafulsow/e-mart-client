@@ -2,11 +2,12 @@ import React from 'react';
 import{ Swiper,SwiperSlide} from 'swiper/react';
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import { EffectCube, Pagination } from "swiper";
+import { EffectCube, Pagination , Autoplay } from "swiper";
 import 'swiper/css';
 import './banner.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFontAwesome , faIdeal } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faFontAwesome , faIdeal, faPeriscope, faAlipay, faSistrix, faKaggle } from '@fortawesome/free-brands-svg-icons'
+import { faEarDeaf, faEarListen, faEarth, faLadderWater } from '@fortawesome/free-solid-svg-icons';
 
 
 const Banner = () => {
@@ -17,22 +18,28 @@ const Banner = () => {
            <div className=" flex justify-center flex-row h-1/4 overflow-hidden p-10 ">
             {/* the first hover with navigation part will be here  */}
 <div className='basis-1/4 flex flex-col divide-y divide-gray-300 font-mono'>
-<button className="w-full hover:bg-violet-300 text-xl border-black-600 h-12"> <FontAwesomeIcon icon={faIdeal} className="mx-3" />HOT DEALS </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">WINTER SALE  </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">BLACK FRIDAY OFFER  </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">TOP PC WITH OFFER </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">TRENDING TECHS</button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">FLASH SALE </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">NEW MOBILE SALE </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">NEW LAPTOPS </button>
-<button className="w-full hover:bg-violet-300  text-xl border-black-600 h-12">EXCESSORIES </button>
+<button className="w-full hover:bg-violet-300 text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faIdeal} className="mx-3" />HOT DEALS </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faPeriscope} className="mx-3" />WINTER SALE  </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faAlipay} className="mx-3" />BLACK FRIDAY OFFER  </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faSistrix} className="mx-3" />TOP PC WITH OFFER </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faKaggle} className="mx-3" />TRENDING TECHS</button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faEarDeaf} className="mx-3" />FLASH SALE </button> 
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"> <FontAwesomeIcon icon={faEarListen} className="mx-3" />NEW MOBILE SALE </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"><FontAwesomeIcon icon={faEarth} className="mx-3" /> NEW LAPTOPS </button>
+<button className="w-full hover:bg-violet-300  text-xl text-left border-black-600 h-12"><FontAwesomeIcon icon={faLadderWater} className="mx-3" /> EXCESSORIES </button> 
 
 </div>
 
             {/* and this is the caruousel part  */}
            <Swiper className="w-3/4 h-1/2 basis-3/4 float-right	"
              effect={"cube"}
+             rewind={true}
+             navigation={true}
              grabCursor={true}
+             autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
              cubeEffect={{
                shadow: true,
                slideShadows: true,
@@ -40,7 +47,7 @@ const Banner = () => {
                shadowScale: 0.94,
              }}
              pagination={true}
-             modules={[EffectCube, Pagination]}
+             modules={[EffectCube, Autoplay,Pagination]}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
