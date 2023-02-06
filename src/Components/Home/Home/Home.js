@@ -1,4 +1,6 @@
 import React from 'react';
+
+import AppliancesBanner from '../appliancesBanner/AppliancesBanner';
 import OfferBanner from '../../Shared/OfferBanner/OfferBanner';
 import Banner from '../Banner/Banner';
 import BannerInfo from '../BannerInfo/BannerInfo';
@@ -15,6 +17,7 @@ const Home = () => {
             <SmartPhoneArea />
             <OfferBanner />
             <HomeAppliances />
+            <AppliancesBanner></AppliancesBanner>
         </div>
     );
 };
