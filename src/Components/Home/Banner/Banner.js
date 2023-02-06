@@ -55,10 +55,10 @@ const Banner = () => {
       <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
        <div>
-        <p className='text-5xl font-bold my-4'>NEW MOBILE</p>
-        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-        <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-        <button  className="btn btn-wide my-9">Wide</button>
+        <p className='text-5xl font-bold my-4 font-mono'>NEW MOBILE</p>
+        <p className='text-5xl font-bold my-4 font-mono'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold font-mono'>8K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9 font-mono">Wide</button>
        </div>
       <img className='box-border' src="https://i.ibb.co/NFYPH2F/slide1-electronic-1.png" height="80%" alt=""/>
       </div>
@@ -68,10 +68,10 @@ const Banner = () => {
       <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
        <div>
-        <p className='text-5xl font-bold my-4'>NEW LAPTOP</p>
-        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-        <p className='text-5xl font-bold'>12K <span className='font-normal'>VIDEO</span></p>
-        <button  className="btn btn-wide my-9">Wide</button>
+        <p className='text-5xl font-bold my-4 font-mono'>NEW LAPTOP</p>
+        <p className='text-5xl font-bold my-4 font-mono'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold font-mono'>12K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9 font-mono">Wide</button>
        </div>
        <img src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt=""/>
       </div>
@@ -81,10 +81,10 @@ const Banner = () => {
       <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
 
        <div>
-        <p className='text-5xl font-bold my-4'>NEW CAMERA</p>
-        <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-        <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-        <button  className="btn btn-wide my-9">Wide</button>
+        <p className='text-5xl font-bold my-4 font-mono '>NEW CAMERA</p>
+        <p className='text-5xl font-bold my-4 font-mono'>12MP <span className='font-normal'>F/2.3</span></p>
+        <p className='text-5xl font-bold font-mono'>8K <span className='font-normal'>VIDEO</span></p>
+        <button  className="btn btn-wide my-9 font-mono">Wide</button>
        </div>
       <img src="https://i.ibb.co/FxYgbP4/slide3-electronic1.png" alt=""/>
       </div>
