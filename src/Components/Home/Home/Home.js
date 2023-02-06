@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import OfferBanner from '../../Shared/OfferBanner/OfferBanner';
 import Banner from '../Banner/Banner';
 import BannerInfo from '../BannerInfo/BannerInfo';
@@ -15,6 +16,7 @@ const Home = () => {
             <SmartPhoneArea />
             <OfferBanner />
             <HomeAppliances />
+            <Footer></Footer>
         </div>
     );
 };
