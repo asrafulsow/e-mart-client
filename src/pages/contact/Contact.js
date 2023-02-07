@@ -3,13 +3,13 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "./contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDailymotion, faDashcube, faIdeal, faOctopusDeploy } from "@fortawesome/free-brands-svg-icons";
+import { faDailymotion, faDashcube, faFacebook, faIdeal, faOctopusDeploy, faTwitch, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faKhanda } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
   const myIcon = new L.Icon({
     iconUrl: "https://i.ibb.co/qFNPPmq/16968-200.png",
     iconRetinaUrl: "https://i.ibb.co/qFNPPmq/16968-200.png",
-    popupAnchor: "[51,-0.01]",
+    popupAnchor: "[51.505,-0.09]",
     iconSize: "[100px,44]",
   });
 
@@ -54,6 +54,13 @@ const Contact = () => {
           <h2>Time</h2>
           <h3>Monday-sunday</h3>
         </div>
+        </div>
+        <div className="flex items-center">
+        <FontAwesomeIcon style={{width:'50px',height:' 70px'}}icon={faTwitch} className="mx-3" />
+        <FontAwesomeIcon style={{width:'50px',height:' 70px'}}icon={faTwitter} className="mx-3" />
+        <FontAwesomeIcon style={{width:'50px',height:' 70px'}}icon={faFacebook} className="mx-3" />
+        <FontAwesomeIcon style={{width:'50px',height:' 70px'}}icon={faYoutube} className="mx-3" />
+        
         </div>
         
          </div>
@@ -100,7 +107,7 @@ const Contact = () => {
       </div>
       <MapContainer
         style={{
-          height: "700px",
+          height: "600px",
           backgroundColor: "red",
           marginTop: "80px",
           width: "100%",
