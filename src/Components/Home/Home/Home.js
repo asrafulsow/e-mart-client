@@ -8,6 +8,7 @@ import BannerInfo from '../BannerInfo/BannerInfo';
 import FlashSale from '../FlashSale/FlashSale';
 import HomeAppliances from '../HomeAppliances/HomeAppliances';
 import SmartPhoneArea from '../SmartPhoneArea/SmartPhoneArea';
+import GamesProduct from "../GamesProduct/GamesProduct";
 
 
 const Home = () => {
@@ -20,7 +21,8 @@ const Home = () => {
             <OfferBanner />
             <HomeAppliances />
             <AppliancesBanner></AppliancesBanner>
-            <PopularPostContainer/>
+            <GamesProduct />
+            <PopularPostContainer />
             <Footer></Footer>
         </div>
     );
