@@ -6,7 +6,7 @@ const UpperNavbar = () => {
     <div className="container mx-auto p-4">
       <div className="navbar text-white">
         <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl xs:hidden">
+          <a href="#" className="btn btn-ghost normal-case text-xl xs:hidden">
             <img style={{ height: "30px" }} src={logo} alt="logo" />
           </a>
         </div>

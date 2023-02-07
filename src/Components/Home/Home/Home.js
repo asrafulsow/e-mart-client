@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 import AppliancesBanner from '../appliancesBanner/AppliancesBanner';
 import OfferBanner from '../../Shared/OfferBanner/OfferBanner';
 import Banner from '../Banner/Banner';
@@ -21,6 +21,7 @@ const Home = () => {
             <HomeAppliances />
             <AppliancesBanner></AppliancesBanner>
             <PopularPostContainer/>
+            <Footer></Footer>
         </div>
     );
 };

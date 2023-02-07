@@ -3,7 +3,8 @@ import "./App.css";
 import Home from "./Components/Home/Home/Home";
 import Header from "./Components/Shared/Navbar/Header";
 import NotFound from "./Components/Shared/NotFound/NotFound";
-
+import Contact from "./pages/contact/Contact";
+import 'leaflet/dist/leaflet.css'
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
