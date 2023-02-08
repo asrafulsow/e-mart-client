@@ -26,7 +26,7 @@ const data = [
     title: "Capacity Countertop Microwave Oven",
     price: "$140.00",
     discountPrice: "$99.00",
-    stock: false,
+    stock: true,
   },
 ];
 
@@ -58,9 +58,12 @@ const Wishlist = () => {
                   <div className="text-red-500 font-bold">{<RxValueNone className="inline-block"/>}Out of stock</div>
                 )}
               </div>
+              {
+                d.stock&&
               <button className="text-center block w-full border border-2 border-black rounded-md hover:bg-black hover:text-white md:w-auto px-2 py-1 transition duration-300 mt-3 mb-3 ">
                 Add to cart
               </button>
+      }
             </div>
           </div>
         );
