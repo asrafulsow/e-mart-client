@@ -9,6 +9,7 @@ import FlashSale from '../FlashSale/FlashSale';
 import HomeAppliances from '../HomeAppliances/HomeAppliances';
 import SmartPhoneArea from '../SmartPhoneArea/SmartPhoneArea';
 import GamesProduct from "../GamesProduct/GamesProduct";
+import ReviewArea from "../ReviewArea/ReviewArea";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             <HomeAppliances />
             <AppliancesBanner></AppliancesBanner>
             <GamesProduct />
+            <ReviewArea />
             <PopularPostContainer />
             <Footer></Footer>
         </div>
