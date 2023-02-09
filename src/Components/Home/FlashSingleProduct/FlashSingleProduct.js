@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import QuickView from '../QuickView/QuickView';
 import Ratting from '../Ratting/Ratting';
 
 const FlashSingleProduct = ({ image }) => {
     const [isHovered, setIsHovered] = useState(false);
-
+    const [view, setView] = useState(false)
     const handleMouseEnter = () => setIsHovered(true);
     const handleMouseLeave = () => setIsHovered(false);
 
@@ -13,6 +14,7 @@ const FlashSingleProduct = ({ image }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
+            <QuickView view = {view} setView={setView}></QuickView>
             <img
                 className={`w-64 h-64 object-cover rounded-lg transition-all duration-300 transform ${isHovered ? 'scale-110' : ''}`}
                 src={image}
@@ -23,7 +25,7 @@ const FlashSingleProduct = ({ image }) => {
             <p className='mt-2'><del className='text-gray-300'>$150.00</del><span className='text-red-600'> $129.00</span></p>
             <div className="cart-footer space-x-2">
                 <span className='cursor-pointer text-xs font-bold hover:underline border'>ADD TO CART</span>
-                <span className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
+                <span onClick={()=> setView(true)} className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
             </div>
         </div>
     );
