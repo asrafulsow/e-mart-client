@@ -4,7 +4,8 @@ import About from "./Components/About/About";
 import Home from "./Components/Home/Home/Home";
 import Header from "./Components/Shared/Navbar/Header";
 import NotFound from "./Components/Shared/NotFound/NotFound";
-
+import Contact from "./pages/contact/Contact";
+import "leaflet/dist/leaflet.css";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
