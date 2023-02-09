@@ -56,9 +56,9 @@ function PopularPostContainer() {
   window.addEventListener("resize", () => setWidth(window.innerWidth));
 
   return (
-    <div className="p-[20px] max-w-[1100px] m-auto">
-      <div className="top flex justify-between text-[26px] mb-5 text-center leading-[0] mb-7">
-        <h3 className="font-bold">Most Popular Blog Posts</h3>
+    <div className="w-11/12 mx-auto pt-10">
+      <div className="top flex justify-between items-center text-[26px] mb-10 text-center leading-[0]">
+        <h3 className="font-bold text-xl pb-2">Most Popular Blog Posts</h3>
         <NavLink to="#" className="text-[16px] underline-offset-1 underline hover:text-red-500">VIEW MORE</NavLink>
       </div>
       <Swiper

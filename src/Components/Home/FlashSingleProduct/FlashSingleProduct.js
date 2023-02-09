@@ -21,6 +21,10 @@ const FlashSingleProduct = ({ image }) => {
             <h3 className="text-base font-medium mt-4 mb-2">Simple Mobile 4G LTE Prepaid Smartphone</h3>
             <Ratting />
             <p className='mt-2'><del className='text-gray-300'>$150.00</del><span className='text-red-600'> $129.00</span></p>
+            <div className="cart-footer space-x-2">
+                <span className='cursor-pointer text-xs font-bold hover:underline border'>ADD TO CART</span>
+                <span className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
+            </div>
         </div>
     );
 };
