@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../../../images/logo.png";
+import {AiOutlineHeart} from 'react-icons/ai'
+import { NavLink } from 'react-router-dom';
 
 const UpperNavbar = () => {
   return (
@@ -65,8 +67,10 @@ const UpperNavbar = () => {
               </li>
             </ul>
           </div>
-          <button className="btn btn-ghost btn-circle">
-            <svg
+          <NavLink to="/wishlist" className="btn text-[25px] btn-ghost btn-circle relative">
+            <span className="absolute text-white bg-red-700 rounded px-1 text-[15px] top-0 right-0">2</span>
+            <AiOutlineHeart/>
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"
@@ -79,8 +83,8 @@ const UpperNavbar = () => {
                 strokeWidth="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
-            </svg>
-          </button>
+            </svg> */}
+          </NavLink>
           <button className="btn btn-ghost btn-circle">
             <div className="indicator">
               <svg
