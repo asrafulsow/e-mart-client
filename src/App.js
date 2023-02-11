@@ -7,6 +7,7 @@ import Header from "./Components/Shared/Navbar/Header";
 import NotFound from "./Components/Shared/NotFound/NotFound";
 import Contact from "./pages/contact/Contact";
 import "leaflet/dist/leaflet.css";
+import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist/>}/>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<DynamicBlog />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
