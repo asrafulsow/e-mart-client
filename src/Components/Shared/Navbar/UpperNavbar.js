@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.png";
 
-import {AiOutlineHeart} from 'react-icons/ai'
+import { AiOutlineHeart } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom';
 
 import { useForm } from "react-hook-form";
@@ -34,12 +34,11 @@ const UpperNavbar = () => {
       <div className="navbar text-white">
         <div className="navbar-start">
 
-          <a href="#" className="btn btn-ghost normal-case text-xl xs:hidden">
+          <a href="#" className="btn btn-ghost normal-case text-xl xs:hidden" />
 
-          <a href="/" className="btn btn-ghost normal-case text-xl xs:hidden">
+          <a href="/" className="btn btn-ghost normal-case text-xl xs:hidden" />
 
-            <img style={{ height: "30px" }} src={logo} alt="logo" />
-          </a>
+          <img style={{ height: "30px" }} src={logo} alt="logo" />
         </div>
         <div className="navbar-center">
           <div className=" bg-white">
@@ -187,7 +186,7 @@ const UpperNavbar = () => {
           </div>
           <NavLink to="/wishlist" className="btn text-[25px] btn-ghost btn-circle relative">
             <span className="absolute text-white bg-red-700 rounded px-1 text-[15px] top-0 right-0">2</span>
-            <AiOutlineHeart/>
+            <AiOutlineHeart />
             {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
