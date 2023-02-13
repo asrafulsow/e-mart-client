@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import recentProduct from "../../../imagess/mobile-product2.png"
+import Ratting from "../../Home/Ratting/Ratting";
+import RecentView from "../RecentView/RecentView";
 
 const Navbar = () => {
   const menuItems = (
@@ -12,9 +15,6 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/blog">Blogs</Link>
-      </li>
-      <li>
-        <Link to="/pages">Pages</Link>
       </li>
       <li>
         <Link to="/about">About Us</Link>
@@ -72,19 +72,12 @@ const Navbar = () => {
                     <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                   </svg>
                 </a>
-                <ul className="p-2 text-black">
-                  <li>
-                    <a href="/">TOP 100 OFFERS</a>
-                  </li>
-                  <li>
-                    <a href="/">SMART PHONE & TABLETS</a>
-                  </li>
-                  <li>
-                    <a href="/">COMPUTER & LAPTOPS</a>
-                  </li>
-                  <li>
-                    <a href="/">HOUSEWARE</a>
-                  </li>
+                <ul className="p-2 text-black bg-white border h-[400px] z-20 w-[360px] text-left overflow-x-hidden">
+                  <RecentView />
+                  <RecentView />
+                  <RecentView />
+                  <RecentView />
+                  <RecentView />
                 </ul>
               </li>
             </ul>
