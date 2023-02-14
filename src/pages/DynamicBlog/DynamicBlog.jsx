@@ -2,6 +2,7 @@ import { faFacebook, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-br
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import PopularPostContainer from '../../Components/Home/MostPopularBlog/PopularPostContainer';
+import CommentSection from './CommentSection';
 
 const DynamicBlog = () => {
     return (
@@ -164,6 +165,67 @@ There is one other <span className="text-rose-700 font-bold">difference between 
 </div>
 
 <PopularPostContainer></PopularPostContainer>
+<div style={{marginTop:'-100px', marginLeft:'22~px'}}>
+
+    <h1>Leave Commment here </h1>
+
+    <form
+            action="https://formsubmit.co/mahlilmaheee223@gmail.com"
+            method="POST"
+            className="grid grid-rows-4 gap-4"
+          >
+            {/* first line of the grid section will contain two input field  */}
+            <div className="flex justify-between">
+              <label class="block">
+                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block pl-2 text-sm font-serif  text-zinc-400">
+                  Name
+                </span>
+                <input
+                  type="text"
+               
+                  class="border radius-sm  h-20  basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
+                  name="name"
+                  style={{width:'320px'}}
+                  required
+                />
+              </label>
+             
+                <label class="block">
+                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2    text-zinc-400">
+                  Email
+                </span>
+                <input
+                type="email"
+               
+                style={{width:'320px'}}
+                class="border radius-sm basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
+                name="email"
+                required
+              />
+              </label>
+              
+            </div>
+       
+           
+          
+               <label class="block row-span-2">
+                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2   text-zinc-400">
+                  Name
+                </span>
+                <textarea
+            class="border radius-sm basis-1/2 h-32  mx-1 my-2 border-zinc-400 w-full"
+             
+            ></textarea>
+              </label>
+            <button
+              type="submit"
+              className="outline outline-2  m-1 border-zinc-400"
+              style={{ width: "180px", height:'40px' }}
+            >
+              Submit Comment
+            </button>
+          </form>
+</div>
         </div>
        
 
@@ -234,9 +296,14 @@ There is one other <span className="text-rose-700 font-bold">difference between 
 
 
  </div>
+
+
+ 
         </div>
+       
       </div>
     );
+
 };
 
 export default DynamicBlog;
