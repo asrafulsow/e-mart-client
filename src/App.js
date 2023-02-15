@@ -10,6 +10,8 @@ import Header from "./Components/Shared/Navbar/Header";
 import NotFound from "./Components/Shared/NotFound/NotFound";
 import ShopPage from "./Components/ShopPage/ShopPage";
 import Contact from "./pages/contact/Contact";
+import "leaflet/dist/leaflet.css";
+import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<DynamicBlog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/*" element={<NotFound />} />

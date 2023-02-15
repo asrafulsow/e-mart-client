@@ -33,7 +33,7 @@ function SinglePost({ post }) {
       </NavLink>
       <div className="excerpt text-[13px]">{description.slice()}</div>
 
-      <NavLink to={link} className="inline-block hover:text-red-500 font-bold mt-5 text-[16px] ">READ MORE<FaLongArrowAltRight className="inline-block" /></NavLink>
+      <NavLink to='/blog' className="inline-block hover:text-red-500 font-bold mt-5 text-[16px] ">READ MORE<FaLongArrowAltRight className="inline-block" /></NavLink>
 
     </div>
   );
