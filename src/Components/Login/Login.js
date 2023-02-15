@@ -6,6 +6,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../firebase.config";
 
@@ -28,21 +29,9 @@ const Login = () => {
   const handleForgotPassword = async () => {
     if (email) {
       await sendPasswordResetEmail(email);
-      <div className="toast">
-        <div className="alert alert-info">
-          <div>
-            <span>Sent reset email</span>
-          </div>
-        </div>
-      </div>;
+      toast("Sent reset email");
     } else {
-      <div className="toast">
-        <div className="alert alert-info">
-          <div>
-            <span>Provide an email address</span>
-          </div>
-        </div>
-      </div>;
+      toast("Provide an email address");
     }
   };
   let signInError;
@@ -55,13 +44,7 @@ const Login = () => {
     return <Loading />;
   }
   if (eUser) {
-    <div className="toast">
-      <div className="alert alert-info">
-        <div>
-          <span>User Logged in successfully</span>
-        </div>
-      </div>
-    </div>;
+    toast("User Logged in successfully");
   }
   return (
     <div className="flex justify-center items-center h-full">

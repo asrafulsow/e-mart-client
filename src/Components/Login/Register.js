@@ -7,6 +7,7 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import auth from "../../firebase.config";
 import Loading from "../Shared/Loading/Loading";
 
@@ -24,13 +25,7 @@ const Register = () => {
     await createUserWithEmailAndPassword(data.email, data.password);
     const success = await updateProfile({ displayName: data.name });
     if (success) {
-      <div className="toast">
-        <div className="alert alert-info">
-          <div>
-            <span>User Created Successfully</span>
-          </div>
-        </div>
-      </div>;
+      toast("User Created Successfully");
     }
   };
 

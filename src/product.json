@@ -1,0 +1,132 @@
+[
+  {
+    "image": "https://i.ibb.co/XFWYJWg/mobile-product.png",
+    "price": 80,
+    "category": "phone",
+    "rating": 4.5,
+    "quantity": 10,
+    "name": "Samsung Electronics Samsung Galaxy S21 5G",
+    "brand": "Samsung",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine"
+  },
+  {
+    "image": "https://i.ibb.co/RhVLmDL/mobile-product1.png",
+    "price": 50,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "Apple iMac with Retina 5K, 27-inch Display",
+    "brand": "Apple",
+    "description": "The design of MacBook Pro packs a lot of power into not a lot of space. Because we believe that high performance shouldn’t come at the expense of portability. And despite being so compact, the new 13-inch and 15-inch MacBook Pro with Retina display models now deliver up to 10 hours and nine hours of battery life, respectively — an hour more than the previous models."
+  },
+  {
+    "image": "https://i.ibb.co/PrtkRgw/mobile-product6.png",
+    "price": 90,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "8″ HD Processor 16GB Storage Smartphone",
+    "brand": "OnePlus",
+    "description": "5G Unlocked for T-mobile and Google Fi. 4G Compatible with T-Mobile, AT&T, Verizon and Google Fi. Powered by the latest Qualcomm 5G chipset, the OnePlus Nord N200 5G allows you to download or stream your favorite TV shows, connect with your social media, and play online multiplayer at blazing fast speeds"
+  },
+  {
+    "image": "https://i.ibb.co/y4QLcB4/google-phone.jpg",
+    "price": 90,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "Google Pixel 6a - 5G Android Phone",
+    "brand": "Google",
+    "description": "Google Pixel 6a adapts to you; it’s super fast and secure and powered by Google Tensor, the first chip designed by Google just for Pixel.Form_factor : Bar"
+  },
+  {
+    "image": "https://i.ibb.co/y4QLcB4/google-phone.jpghttps://i.ibb.co/86HYvgJ/product-2.png",
+    "price": 90,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "Apple iPhone 12 Pro Max, 128GB, Pacific Blue",
+    "brand": "Apple",
+    "description": "Unlocked and compatible with any carrier of choice on GSM and CDMA networks (e.g. AT&T, T-Mobile, Sprint, Verizon, US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.)."
+  },
+  {
+    "image": "https://i.ibb.co/y4QLcB4/google-phone.jpghttps://i.ibb.co/86HYvgJ/product-2.pnghttps://i.ibb.co/BZtW43Z/mobile-product8.png",
+    "price": 90,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "Apple iPhone 13 Pro Max, 128GB, Pacific Gray",
+    "brand": "Apple",
+    "description": "Unlocked and compatible with any carrier of choice on GSM and CDMA networks (e.g. AT&T, T-Mobile, Sprint, Verizon, US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.)."
+  },
+  {
+    "image": "https://i.ibb.co/7XTjMw7/mobile-product5.png",
+    "price": 110,
+    "category": "phone",
+    "rating": 4.4,
+    "quantity": 10,
+    "name": "Honor (32GB) 6.09″ HD+ Display, Dual SIM 4G",
+    "brand": "Honor",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
+  },
+  {
+    "image": "https://i.ibb.co/sgxz5z1/home-product5.png",
+    "price": 210,
+    "category": "camera",
+    "rating": 4.8,
+    "quantity": 14,
+    "name": "Panasonic 4K Digital Camera",
+    "brand": "Panasonic",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
+  },
+  {
+    "image": "https://i.ibb.co/NVwxRhs/home-product.png",
+    "price": 200,
+    "category": "camera",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Canon Digital Camera",
+    "brand": "Canon",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
+  },
+  {
+    "image": "https://i.ibb.co/SnYcgv8/electronic-60.jpg",
+    "price": 230,
+    "category": "camera",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Canon Digital Camera",
+    "brand": "Canon",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
+  },
+  {
+    "image": "https://i.ibb.co/SnYcgv8/electronic-60.jpghttps://i.ibb.co/P1TvDSP/oven.png",
+    "price": 30,
+    "category": "oven",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Capacity Counter top Microwave Oven",
+    "brand": "BLACK+DECKER",
+    "description": "Air Fry Technology: Deep fried taste without the fat! This innovative cooking method surrounds food with high intensity hot air to bake, brown, and crisp your favorite foods using little to no oil."
+  },
+  {
+    "image": "https://i.ibb.co/2FpgjC5/61-Ed-QRc-j-ML-AC-SX679.jpg",
+    "price": 40,
+    "category": "oven",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Toaster Oven",
+    "brand": "Oster",
+    "description": "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination"
+  },
+  {
+    "image": "https://i.ibb.co/gTVkRDj/71-Si2-G-Kd-S-AC-SX679.jpg",
+    "price": 30,
+    "category": "oven",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": " Quartz Heat Toaster Oven",
+    "brand": "Calphalon",
+    "description": "Quartz heating element delivers 40% more even heat and preheats faster (Compared to conventional tube heating element) Extra-large capacity can fit a 12” pizza"
+  }
+]
