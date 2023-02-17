@@ -14,9 +14,9 @@ const FlashSingleProduct = ({ image }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <QuickView view = {view} setView={setView}></QuickView>
+            <QuickView view={view} setView={setView}></QuickView>
             <img
-                className={`w-64 h-64 object-cover rounded-lg transition-all duration-300 transform ${isHovered ? 'scale-110' : ''}`}
+                className={`w-64 h-[200px] object-cover rounded-lg transition-all duration-300 transform ${isHovered ? 'scale-110' : ''}`}
                 src={image}
                 alt="Product"
             />
@@ -25,7 +25,7 @@ const FlashSingleProduct = ({ image }) => {
             <p className='mt-2'><del className='text-gray-300'>$150.00</del><span className='text-red-600'> $129.00</span></p>
             <div className="cart-footer space-x-2">
                 <span className='cursor-pointer text-xs font-bold hover:underline border'>ADD TO CART</span>
-                <span onClick={()=> setView(true)} className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
+                <span onClick={() => setView(true)} className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
             </div>
         </div>
     );
