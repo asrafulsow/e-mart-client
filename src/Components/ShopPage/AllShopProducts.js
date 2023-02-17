@@ -21,7 +21,7 @@ const AllShopProducts = ({ product }) => {
             />
             <h3 className="text-base font-medium mt-4 mb-2">{product.name}</h3>
             <Ratting />
-            <p className='mt-2'><del className='text-gray-300'>$150.00</del><span className='text-red-600'> {product.price}</span></p>
+            <p className='mt-2'><del className='text-gray-300'>$150.00</del><span className='text-red-600'> ${product.price}.00</span></p>
             <div className="cart-footer space-x-2">
                 <span className='cursor-pointer text-xs font-bold hover:underline border'>ADD TO CART</span>
                 <span onClick={() => setView(true)} className='cursor-pointer text-xs font-bold hover:underline border'>QUICK VIEW</span>
