@@ -128,5 +128,45 @@
     "name": " Quartz Heat Toaster Oven",
     "brand": "Calphalon",
     "description": "Quartz heating element delivers 40% more even heat and preheats faster (Compared to conventional tube heating element) Extra-large capacity can fit a 12” pizza"
+  },
+  {
+    "image": "https://i.ibb.co/ky9sHkZ/laptop.jpg",
+    "price": 300,
+    "category": "laptop",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Sony VAIO E Series Laptop",
+    "brand": "Sony",
+    "description": "Quartz heating element delivers 40% more even heat and preheats faster (Compared to conventional tube heating element) Extra-large capacity can fit a 12” pizza"
+  },
+  {
+    "image": "https://i.ibb.co/Gxnt34r/electronic-74.jpg",
+    "price": 330,
+    "category": "laptop",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Asus 14-inch Laptop",
+    "brand": "Asus",
+    "description": "Quartz heating element delivers 40% more even heat and preheats faster (Compared to conventional tube heating element) Extra-large capacity can fit a 12” pizza"
+  },
+  {
+    "image": "https://i.ibb.co/zhJmHtN/home-product2.png",
+    "price": 360,
+    "category": "headphone",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Wired Over-Ear Gaming Headphones with USB",
+    "brand": "",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
+  },
+  {
+    "image": "https://i.ibb.co/0m74YJ3/head.png",
+    "price": 330,
+    "category": "headphone",
+    "rating": 4.5,
+    "quantity": 14,
+    "name": "Women's 3-in-1 Winter Ski Jacket Outdoor",
+    "brand": "",
+    "description": "A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display gives you the power to create."
   }
 ]

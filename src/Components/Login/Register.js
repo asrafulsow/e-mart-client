@@ -74,10 +74,10 @@ const Register = () => {
                 className="input input-bordered"
                 {...register("email", {
                   required: { value: true, message: " Email is required" },
-                  pattern: {
-                    value: /.+@.+\.[A-Za-z]+$/,
-                    message: "Provide a Valid Email",
-                  },
+                  // pattern: {
+                  //   value: /.+@.+\.[A-Za-z]+$/,
+                  //   message: "Provide a Valid Email",
+                  // },
                 })}
               />
               <label className="label">
@@ -103,11 +103,11 @@ const Register = () => {
                 className="input input-bordered"
                 {...register("password", {
                   required: { value: true, message: " Password is required" },
-                  pattern: {
-                    value:
-                      /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{6,20}$/,
-                    message: "Your Password is wrong",
-                  },
+                  // pattern: {
+                  //   value:
+                  //     /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{6,20}$/,
+                  //   message: "Your Password is wrong",
+                  // },
                 })}
               />
               <label className="label">
