@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FlashSingleProduct from '../Home/FlashSingleProduct/FlashSingleProduct';
 import productMobile from "../../imagess/mobile-product.png"
+import AllShopProducts from './AllShopProducts';
 
 const ShopPage = () => {
     const mobileItemList = [
@@ -15,6 +16,13 @@ const ShopPage = () => {
         "Tablet",
         "Tumpart Glass",
     ];
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://emart-xcpi.onrender.com/products?fbclid=IwAR2nfew-7Vbt-73zb3zA5Z0bAEuop_yMULNXppriA8YW2lBTE-LTBVt2oGw`)
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
     return (
         <div>
             {/* top shop page area just breadcumb */}
@@ -24,8 +32,7 @@ const ShopPage = () => {
                         <p className='text-xl font-bold pb-5'>Shop Page</p>
                         <ul>
                             <li><a>Home</a></li>
-                            <li><a>Documents</a></li>
-                            <li>Add Document</li>
+                            <li><a>Shop Page</a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,14 +164,9 @@ const ShopPage = () => {
                             </div>
                             {/* shop product grid area */}
                             <div className="grid grid-cols-4 gap-6">
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
-                                <FlashSingleProduct image={productMobile} />
+                                {
+                                    products.map((product) => <AllShopProducts key={product._id} product={product} />)
+                                }
                             </div>
                         </div>
                     </div>
