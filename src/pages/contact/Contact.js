@@ -35,7 +35,6 @@ const Contact = () => {
       {/* here I will make two flex section  */}
       <div className="flex items-center">
         <div className="basis-1/2 text-center  contactdiv">
-     
           <div className="fontcontainer">
             <h4>Contact us</h4>
             <h1>Get In Touch With Us </h1>
@@ -49,7 +48,11 @@ const Contact = () => {
             {/* here I will put the flex design  */}
             <div className="fonts">
               <div className="flex font items-center">
-                <FontAwesomeIcon style={{height:'40px'}} icon={faLocationArrow} className="mr-10" />
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faLocationArrow}
+                  className="mr-10"
+                />
                 <div>
                   {" "}
                   <h3>Our location</h3> <p>NEw york , America</p>
@@ -58,7 +61,11 @@ const Contact = () => {
             </div>
             <div>
               <div className="flex font items-center">
-                <FontAwesomeIcon style={{height:'40px'}} icon={faPhone} className="mr-10" />
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faPhone}
+                  className="mr-10"
+                />
                 <div>
                   {" "}
                   <h3>Our Phone:</h3> <p>012444423333</p>
@@ -67,7 +74,11 @@ const Contact = () => {
             </div>
             <div>
               <div className="flex font items-center">
-                <FontAwesomeIcon style={{height:'40px'}} icon={faTelegram} className="mr-10" />
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faTelegram}
+                  className="mr-10"
+                />
                 <div>
                   {" "}
                   <h3>Our Email</h3> <p>xbox@gmail.com</p>
@@ -77,7 +88,6 @@ const Contact = () => {
           </div>
         </div>
         <div className="basis-1/2 text-center contactdiv">
-         
           <div className="formcontainer">
             <form>
               <input type="text" placeholder="your name"></input>
