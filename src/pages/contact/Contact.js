@@ -8,6 +8,7 @@ import {
   faDashcube,
   faFacebook,
   faOctopusDeploy,
+  faTelegram,
   faTwitch,
   faTwitter,
   faYoutube,
@@ -32,181 +33,71 @@ const Contact = () => {
   return (
     <div>
       {/* here I will make two flex section  */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: "2rem",
-          fontFamily: "ui-serif",
-          fontWeight: "600",
-        }}
-      >
-        <h1 style={{ marginLeft: "110px", marginTop: "20px" }}>CONTACT US</h1>
-        <h1 style={{ marginRight: "380px", marginTop: "20px" }}>
-          GET IN TOUCH US
-        </h1>
-      </div>
-      <div
-        className="flex items-center justify-center"
-        style={{
-          paddingLeft: "100px",
-          paddingRight: "100px",
-          fontFamily: "sans-serif",
-          fontWeight: "bold",
-        }}
-      >
-        <div className="flex-1">
-          <div className="grid grid-rows-5 gap-2">
-            {/* here will be the each div containing the section here    */}
-
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                style={{
-                  width: "40px",
-                  height: " 50px",
-                  color: "rgb(112 81 71)",
-                }}
-                icon={faPhone}
-                className="mx-3"
-              />
-              <div>
-                <h2>Call us</h2>
-                <h3>0190334424</h3>
+      <div className="flex items-center">
+        <div className="basis-1/2 text-center  contactdiv">
+          <div className="fontcontainer">
+            <h4>Contact us</h4>
+            <h1>Get In Touch With Us </h1>
+            <p>
+              {" "}
+              This is a ecommerce platform in which we the developers are the
+              owners and we are the developers here too .Please make sure to
+              subscribe our newsletter to follow us and up to date with the
+              latest news{" "}
+            </p>
+            {/* here I will put the flex design  */}
+            <div className="fonts">
+              <div className="flex font items-center">
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faLocationArrow}
+                  className="mr-10"
+                />
+                <div>
+                  {" "}
+                  <h3>Our location</h3> <p>NEw york , America</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                style={{ width: "40px", height: " 50px", color: "#879fa7" }}
-                icon={faBox}
-                className="mx-3"
-              />
-              <div>
-                <h2>Email Address</h2>
-                <h3>kxr@gmail.com</h3>
+            <div>
+              <div className="flex font items-center">
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faPhone}
+                  className="mr-10"
+                />
+                <div>
+                  {" "}
+                  <h3>Our Phone:</h3> <p>012444423333</p>
+                </div>
               </div>
             </div>
-            <div className="flex  items-center">
-              <FontAwesomeIcon
-                style={{ width: "40px", height: " 50px", color: "#111a26f2" }}
-                icon={faLocationArrow}
-                className="mx-3"
-              />
-              <div>
-                <h2>Store Location</h2>
-                <h3>Florida, Neywork</h3>
+            <div>
+              <div className="flex font items-center">
+                <FontAwesomeIcon
+                  style={{ height: "40px" }}
+                  icon={faTelegram}
+                  className="mr-10"
+                />
+                <div>
+                  {" "}
+                  <h3>Our Email</h3> <p>xbox@gmail.com</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                style={{
-                  width: "40px",
-                  height: " 50px",
-                  color: "rgb(110 52 35)",
-                }}
-                icon={faStopwatch}
-                className="mx-3"
-              />
-              <div>
-                <h2>Time</h2>
-                <h3>Monday-sunday</h3>
-              </div>
-            </div>
-            <div className="flex items-center mt-5">
-              <FontAwesomeIcon
-                style={{
-                  width: "40px",
-                  height: " 40px",
-                  color: "rgb(89 0 231)",
-                }}
-                icon={faTwitch}
-                className="mx-3"
-              />
-              <FontAwesomeIcon
-                style={{
-                  width: "40px",
-                  height: " 40px",
-                  color: "rgb(7 198 229)",
-                }}
-                icon={faTwitter}
-                className="mx-3"
-              />
-              <FontAwesomeIcon
-                style={{
-                  width: "40px",
-                  height: " 40px",
-                  color: "rgb(30 127 211)",
-                }}
-                icon={faFacebook}
-                className="mx-3"
-              />
-              <FontAwesomeIcon
-                style={{ width: "40px", height: " 40px", color: "#ed3a04" }}
-                icon={faYoutube}
-                className="mx-3"
-              />
             </div>
           </div>
         </div>
-        <div className="flex-1 p-4">
-          <form
-            action="https://formsubmit.co/mahlilmaheee223@gmail.com"
-            method="POST"
-            className="grid grid-rows-4 gap-4"
-          >
-            {/* first line of the grid section will contain two input field  */}
-            <div className="flex justify-between">
-              <label class="block">
-                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block pl-2 text-sm font-serif  text-zinc-400">
-                  Name
-                </span>
-                <input
-                  type="text"
-                  class="border radius-sm  h-20  basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
-                  name="name"
-                  style={{ width: "260px" }}
-                  required
-                />
-              </label>
+        <div className="basis-1/2 text-center contactdiv">
+          <div className="formcontainer">
+            <form>
+              <input type="text" placeholder="your name"></input>
+              <input type="email" placeholder="your email address"></input>
 
-              <label class="block">
-                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2    text-zinc-400">
-                  Email
-                </span>
-                <input
-                  type="email"
-                  style={{ width: "260px" }}
-                  class="border radius-sm basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
-                  name="email"
-                  required
-                />
-              </label>
-            </div>
-
-            <label class="block " style={{ width: "100%" }}>
-              <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif  pl-2  text-zinc-400">
-                subject
-              </span>
-              <input
-                type="text"
-                name="subject"
-                class="border radius-sm h-10 basis-1/2 w-full mx-1 my-2 border-zinc-400"
-              />
-            </label>
-
-            <label class="block row-span-2">
-              <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2   text-zinc-400">
-                Name
-              </span>
-              <textarea class="border radius-sm basis-1/2 h-20  mx-1 my-2 border-zinc-400 w-full"></textarea>
-            </label>
-            <button
-              type="submit"
-              className="outline outline-2  m-1 border-zinc-400"
-              style={{ width: "180px", height: "40px" }}
-            >
-              Submit question
-            </button>
-          </form>
+              <input type="number" placeholder="your number"></input>
+              <textarea row="6" placeholder="your message"></textarea>
+              <button>Submit query</button>
+            </form>
+          </div>
         </div>
       </div>
       <MapContainer

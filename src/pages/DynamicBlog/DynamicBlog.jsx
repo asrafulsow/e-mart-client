@@ -5,13 +5,43 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import PopularPostContainer from "../../Components/Home/MostPopularBlog/PopularPostContainer";
+import auth from "../../firebase.config";
 // import CommentSection from "./CommentSection";
 
 const DynamicBlog = () => {
+  const [user] = useAuthState(auth);
+  const [textareaValue, setTextareaValue] = useState("");
+  const handleTextareaChange = (e) => {
+    setTextareaValue(e.target.value);
+  };
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    console.log("click", user.displayName, user.email, textareaValue);
+    const comment = {
+      name: user.displayName,
+      email: user.email,
+      comment: textareaValue,
+    };
+    axios
+      .post(`http://localhost:5088/comment`, comment)
+      .then((res) => {
+        console.log(res.data);
+        if (res?.data?.insertedId) {
+          toast("comment success");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("something is wrong");
+      });
+  };
   return (
-    <div class="grid grid-cols-3 font-rubik ">
+    <div className="grid grid-cols-3 font-rubik ">
       {/* this is the first div to take the contents here   */}
       <div className="col-span-2 p-16 ">
         {/* the details of the blog post  */}
@@ -239,41 +269,52 @@ const DynamicBlog = () => {
         <div style={{ marginTop: "-100px", marginLeft: "22~px" }}>
           <h1>Leave Commment here </h1>
 
-          <form className="grid grid-rows-4 gap-4">
+          <form
+            onSubmit={handleCommentSubmit}
+            className="grid grid-rows-4 gap-4"
+          >
             {/* first line of the grid section will contain two input field  */}
             <div className="flex justify-between">
-              <label class="block">
-                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block pl-2 text-sm font-serif  text-zinc-400">
+              <label className="block">
+                <span className="after:content-['*'] after:ml-0.5 after:text-zinc-500 block pl-2 text-sm font-serif  text-zinc-400">
                   Name
                 </span>
                 <input
                   type="text"
-                  class="border radius-sm  h-20  basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
+                  className="border radius-sm  h-20  basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
                   name="name"
                   style={{ width: "320px" }}
+                  value={user?.displayName}
                   required
+                  readOnly
                 />
               </label>
 
-              <label class="block">
-                <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2    text-zinc-400">
+              <label className="block">
+                <span className="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2    text-zinc-400">
                   Email
                 </span>
                 <input
                   type="email"
                   style={{ width: "320px" }}
-                  class="border radius-sm basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
+                  className="border radius-sm basis-1/2 w-full h-10 mx-1 my-2 border-zinc-400"
                   name="email"
+                  value={user?.email}
+                  readOnly
                   required
                 />
               </label>
             </div>
 
-            <label class="block row-span-2">
-              {/* <span class="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2   text-zinc-400">
+            <label className="block row-span-2">
+              {/* <span className="after:content-['*'] after:ml-0.5 after:text-zinc-500 block  text-sm font-serif pl-2   text-zinc-400">
                 Name
               </span> */}
-              <textarea class="border radius-sm basis-1/2 h-32  mx-1 my-2 border-zinc-400 w-full"></textarea>
+              <textarea
+                value={textareaValue}
+                onChange={handleTextareaChange}
+                className="border radius-sm basis-1/2 h-32  mx-1 my-2 border-zinc-400 w-full"
+              ></textarea>
             </label>
             <button
               type="submit"
