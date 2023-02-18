@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import FlashSingleProduct from '../Home/FlashSingleProduct/FlashSingleProduct';
-import productMobile from "../../imagess/mobile-product.png"
 import AllShopProducts from './AllShopProducts';
 
 const ShopPage = () => {
@@ -18,11 +16,13 @@ const ShopPage = () => {
     ];
     const [products, setProducts] = useState([]);
 
+    //useEffects
     useEffect(() => {
-        fetch(`https://emart-xcpi.onrender.com/products?fbclid=IwAR2nfew-7Vbt-73zb3zA5Z0bAEuop_yMULNXppriA8YW2lBTE-LTBVt2oGw`)
+        fetch("https://emart-xcpi.onrender.com/products?fbclid=IwAR2nfew-7Vbt-73zb3zA5Z0bAEuop_yMULNXppriA8YW2lBTE-LTBVt2oGw")
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+    console.log(products);
     return (
         <div>
             {/* top shop page area just breadcumb */}
@@ -165,7 +165,10 @@ const ShopPage = () => {
                             {/* shop product grid area */}
                             <div className="grid grid-cols-4 gap-6">
                                 {
-                                    products.map((product) => <AllShopProducts key={product._id} product={product} />)
+                                    products.map((product) => <AllShopProducts
+                                        key={product._id}
+                                        product={product}
+                                    />)
                                 }
                             </div>
                         </div>
