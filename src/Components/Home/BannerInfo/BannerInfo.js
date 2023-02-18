@@ -1,7 +1,7 @@
 import React from 'react';
 import infoBanner3 from "../../../imagess/cover.jpg"
 import laptop from "../../../imagess/laptop.jpg"
-
+import './Bannerinfo.css'
 const BannerInfo = () => {
     const bannerbg = {
         background: `url(${infoBanner3})`,
@@ -10,6 +10,7 @@ const BannerInfo = () => {
         backgroundRepeat: 'norepeat',
         backgroundColor: 'rgba(45,58,74,0.5)',
     }
+
     const laptopbg = {
         background: `url(${laptop})`,
         backgroundSize: 'cover',
@@ -77,10 +78,13 @@ const BannerInfo = () => {
                     </div>
                 </div>
             </div>
+
+             {/* the other part of this section contained two products information  */}
+
             <div className="bottom-info-area pt-10 pb-10">
                 <div className="info-banner w-11/12 mx-auto">
-                    <div className="grid grid-cols-2 gap-3">
-                        <div style={bannerbg}>
+                    <div className="grid grid-cols-2 gap-3  ">
+                        <div style={bannerbg} className="hovereffect">
                             <div className="inf-content space-y-3 px-[60px] py-[40px]">
                                 <h5 className='text-red-700 font-bold'>NEW ARRIVALS</h5>
                                 <h2 className='text-5xl font-bold text-white leading-[60px]'>ON SALE NOW <br /> BLACK FRIDAY</h2>
@@ -88,7 +92,7 @@ const BannerInfo = () => {
                             </div>
                         </div>
                         <div>
-                            <div style={laptopbg}>
+                            <div style={laptopbg} className="hovereffect">
                                 <div className="inf-content space-y-3 px-[60px] py-[40px]">
                                     <h5 className='text-red-700 font-bold'>NEW ARRIVALS</h5>
                                     <h2 className='text-5xl font-bold text-white leading-[60px]'>BEST PRODUCT IN <br /> BEST PRICES</h2>
