@@ -1,4 +1,4 @@
-import { faFaceAngry, faFaceDizzy } from "@fortawesome/free-solid-svg-icons";
+import { faCodeCompare, faFaceAngry, faFaceDizzy, faFaceSmile, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import QuickView from "../QuickView/QuickView";
@@ -25,11 +25,20 @@ const FlashSingleProduct = ({ image }) => {
         src={image}
         alt="Product"
       />
-      <div className="hoverfont">
-        {" "}
-        <FontAwesomeIcon icon={faFaceDizzy}></FontAwesomeIcon>   <br/>
-        <FontAwesomeIcon icon={faFaceAngry}></FontAwesomeIcon>  
-      </div>
+   {
+    isHovered?   <div className="hoverfont">
+    {" "}
+    <FontAwesomeIcon
+      className="iconone"
+      icon={faFileAlt}
+    ></FontAwesomeIcon>{" "}
+    <p className="compare"> <button> Compare</button></p>
+    <br />
+    <FontAwesomeIcon icon={faFaceSmile} className="icontwo"></FontAwesomeIcon>
+    <p className="wishlist">wishlist</p>
+  </div>:''
+   }
+      
       <h3 className="text-base font-medium mt-4 mb-2">
         Simple Mobile 4G LTE Prepaid Smartphone
       </h3>
