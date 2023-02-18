@@ -28,7 +28,7 @@ const DynamicBlog = () => {
       comment: textareaValue,
     };
     axios
-      .post(`http://localhost:5088/comment`, comment)
+      .post(`https://emart-xcpi.onrender.com/comment`, comment)
       .then((res) => {
         console.log(res.data);
         if (res?.data?.insertedId) {

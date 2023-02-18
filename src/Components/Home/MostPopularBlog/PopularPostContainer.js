@@ -58,7 +58,7 @@ function PopularPostContainer() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5088/posts")
+      .get("https://emart-xcpi.onrender.com/posts")
       .then((res) => setPosts(res.data))
       .catch((err) => console.log(err));
   }, []);
