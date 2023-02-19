@@ -13,12 +13,13 @@ const FlashSingleProduct = ({ image }) => {
 
   return (
     <div
-      className="flex flex-col justify-center p-4 border"
+      className="flex flex-col justify-center p-4  border"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <QuickView view={view} imgi setView={setView}></QuickView>
-      <img
+      <QuickView view={view} setView={setView}></QuickView>
+   <div className="imgi">
+   <img
         className={`w-64 h-[200px] object-cover  rounded-lg transition-all duration-300 transform ${
           isHovered ? "scale-110" : ""
         }   ${isHovered ? "bg-red-200" : ""}`}
@@ -28,16 +29,17 @@ const FlashSingleProduct = ({ image }) => {
    {
     isHovered?   <div className="hoverfont">
     {" "}
-    <FontAwesomeIcon
-      className="iconone"
+    <a href="/about" className="iconone"><FontAwesomeIcon
+ 
       icon={faFileAlt}
-    ></FontAwesomeIcon>{" "}
+    ></FontAwesomeIcon></a>{" "}
     <p className="compare"> <button> Compare</button></p>
     <br />
-    <FontAwesomeIcon icon={faFaceSmile} className="icontwo"></FontAwesomeIcon>
+  <a href="/contact"  className="icontwo">   <FontAwesomeIcon icon={faFaceSmile}></FontAwesomeIcon></a>
     <p className="wishlist">wishlist</p>
   </div>:''
    }
+   </div>
       
       <h3 className="text-base font-medium mt-4 mb-2">
         Simple Mobile 4G LTE Prepaid Smartphone

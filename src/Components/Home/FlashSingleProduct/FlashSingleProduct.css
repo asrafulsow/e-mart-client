@@ -7,15 +7,17 @@
     
     position: absolute;
     background-color: rgb(245, 245, 245);
-    margin-left: 156px;
+    /* margin-left: 156px; */
     padding: 5px;
+  bottom:0px;
+  right: 00px;
 }
 
 
 .compare{
     position: absolute;
     margin-left: -75px;
-    margin-top: -35px;
+    margin-top: -30px;
     z-index: 23;
     background-color: white;
     color:rgb(0, 0, 0);
@@ -23,6 +25,7 @@
     padding:2px;
     display: none;
     transition:1s;
+    font-weight: 600;
     
 }
 .wishlist{
@@ -37,7 +40,18 @@
     display: none;
     
 }
-
+.iconone .icontwo{
+    margin-bottom: 4px;
+    width: 30px;
+    height: 30px;
+   
+}
+/* .iconone:hover{
+    color:rgb(205, 0, 247)
+}
+.icontwo:hover{
+    color:rgb(238, 5, 5)
+} */
 .iconone:hover + .compare{
 display: block;
 color:rgb(0, 0, 0);
