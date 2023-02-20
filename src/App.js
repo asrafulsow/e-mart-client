@@ -13,6 +13,7 @@ import ShopPage from "./Components/ShopPage/ShopPage";
 import Contact from "./pages/contact/Contact";
 import "leaflet/dist/leaflet.css";
 import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
+import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/blog" element={<DynamicBlog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
