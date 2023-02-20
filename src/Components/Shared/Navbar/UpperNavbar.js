@@ -11,7 +11,9 @@ import {
 import { useForm } from "react-hook-form";
 import Loading from "../Loading/Loading";
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { BiUser } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
 import auth from "../../../firebase.config";
 
 const UpperNavbar = () => {
@@ -31,14 +33,13 @@ const UpperNavbar = () => {
   if (eLoading) {
     <Loading />;
   }
-  if (user) {
-    toast("User Logged in successfully");
-  }
+
+
   return (
-    <div className="border-b border-stone-700">
+    <div className="shadow-2xl">
       <div className="container mx-auto p-4">
-        <div className="navbar text-white">
-          <div className="navbar-start">
+        <div className="navbar text-black">
+          <div className="navbar-start w-[28%]">
             <a
               href="#"
               className="btn btn-ghost normal-case text-xl xs:hidden"
@@ -54,57 +55,57 @@ const UpperNavbar = () => {
           <div className="navbar-center">
             <div className=" bg-white">
               <form className="flex">
-                <select className="select select-category select-bordered text-black">
-                  <option disabled defaultValue>
-                    Categories
-                  </option>
-                  <option>One Piece</option>
-                  <option>Naruto</option>
-                  <option>Death Note</option>
-                  <option>Attack on Titan</option>
-                  <option>Bleach</option>
-                  <option>Fullmetal Alchemist</option>
-                  <option>Jojo's Bizarre Adventure</option>
-                </select>
-                <div className="form-control w-full max-w-xs">
+                <div className="form-control w-full max-w-xs relative">
+                  {/* serarch icon area */}
+                  <div className="absolute w-[18%] p-[15px] bg-primary-all text-white rounded-l-[9999px]">
+                    <FaSearch />
+                  </div>
+                  {/* serarch icon area */}
                   <input
                     type="text"
-                    placeholder="Search"
-                    className="input input-bordered w-96"
+                    placeholder="Find Product by Category,name etc..."
+                    className="input input-bordered w-[40rem] pl-[70px] rounded-full"
                   />
                 </div>
               </form>
             </div>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end flex  items-center">
             <NavLink
               to="/login"
-              className="btn text-[25px] btn-ghost btn-circle relative"
             >
-              <BiUser />
+              {user ? <span className="hidden">Login</span> : <button className="visible text-base font-semibold mr-5 border p-2 rounded-lg border-slate-300">Login</button>}
             </NavLink>
+            {user && <div className="dropdown">
+              <label tabIndex={0} className="btn btn-ghost border rounded-full border-slate-300 btn-circle avatar">
+                <BiUser className="w-[50%] h-[30px]" />
+              </label>
+              <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <a className="justify-between">
+                    Profile
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li>
+                  <a
+                    onClick={async () => {
+                      const success = await signOut();
+                      if (success) {
+                        toast("You are sign out");
+                      }
+                    }}
+                  >
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>}
             {user && (
               <div className="dropdown dropdown-hover">
                 <label tabIndex={0} className="btn btn-ghost m-1">
                   <span className="text-sm">{user?.displayName}</span>
                 </label>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu rounded-box w-52 p-2"
-                >
-                  <li>
-                    <a
-                      onClick={async () => {
-                        const success = await signOut();
-                        if (success) {
-                          toast("You are sign out");
-                        }
-                      }}
-                    >
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
               </div>
             )}
 

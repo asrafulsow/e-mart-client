@@ -3,7 +3,7 @@ import QuickView from "../QuickView/QuickView";
 import Ratting from "../Ratting/Ratting";
 
 const FlashSingleProduct = ({ product }) => {
-  console.log(product?.price);
+  // console.log(product?.price);
   const [isHovered, setIsHovered] = useState(false);
   const [view, setView] = useState(false);
   const handleMouseEnter = () => setIsHovered(true);
@@ -18,9 +18,8 @@ const FlashSingleProduct = ({ product }) => {
     >
       <QuickView view={view} setView={setView}></QuickView>
       <img
-        className={`w-64 h-[200px] object-cover rounded-lg transition-all duration-300 transform ${
-          isHovered ? "scale-110" : ""
-        }`}
+        className={`w-64 h-[200px] object-cover rounded-lg transition-all duration-300 transform ${isHovered ? "scale-110" : ""
+          }`}
         src={product?.image}
         alt="Product"
       />

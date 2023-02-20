@@ -48,8 +48,6 @@ const Banner = () => {
           }}
           pagination={true}
           modules={[EffectCube, Autoplay, Pagination]}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

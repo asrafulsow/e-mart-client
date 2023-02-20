@@ -4,7 +4,7 @@ import UpperNavbar from "./UpperNavbar";
 
 const Header = () => {
   return (
-    <div className="bg-accent">
+    <div className="">
       <UpperNavbar />
       <Navbar />
     </div>

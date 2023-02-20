@@ -1,10 +1,11 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
-import recentProduct from "../../../imagess/mobile-product2.png"
-import Ratting from "../../Home/Ratting/Ratting";
 import RecentView from "../RecentView/RecentView";
+import auth from "../../../firebase.config";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
   const menuItems = (
     <>
       <li>
@@ -25,7 +26,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 bg-primary-all">
       <div className="navbar text-white">
         <div className="navbar-start">
           <div className="dropdown">
@@ -82,6 +83,11 @@ const Navbar = () => {
               </li>
             </ul>
           </Link>
+          {user && <Link to="/dashboard">
+            <ul>
+              <li className="font-bold">Dashboard</li>
+            </ul>
+          </Link>}
         </div>
       </div>
     </div>

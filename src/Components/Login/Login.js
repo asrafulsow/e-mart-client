@@ -6,7 +6,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../firebase.config";
 
@@ -123,6 +123,7 @@ const Login = () => {
               className="btn btn-accent w-full"
               value="Login"
             />
+            <ToastContainer limit={1}></ToastContainer>
           </form>
           <p>
             <small>

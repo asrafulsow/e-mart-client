@@ -3,6 +3,7 @@
   border-style: solid;
   border-color: rgba(43, 54, 74, 1);
 }
+
 .select-category {
   width: 170px;
   float: left;
@@ -13,10 +14,16 @@
   padding-right: 30px;
   background-color: transparent;
 }
+
 .search-btn {
   width: 300px;
 }
+
 .nav-login {
   font-size: 18px;
   line-height: 26px;
+}
+
+.bg-primary-all {
+  background: rgb(34, 30, 205);
 }
