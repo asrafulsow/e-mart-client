@@ -36,7 +36,7 @@ const UpperNavbar = () => {
 
 
   return (
-    <div className="shadow-2xl">
+    <div className="">
       <div className="container mx-auto p-4">
         <div className="navbar text-black">
           <div className="navbar-start w-[28%]">
