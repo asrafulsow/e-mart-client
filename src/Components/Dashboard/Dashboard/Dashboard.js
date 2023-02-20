@@ -9,12 +9,15 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-accent">
+            <div className="drawer-side bg-[#eff6fd]">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 bg-accent text-white">
+                <ul className="menu p-4 w-80 bg-[#eff6fd] text-black space-y-5 font-bold text-lg cursor-pointer">
                     {/* <!-- Sidebar content here --> */}
-                    <li className='border-b-[1px]'>Dashboard Home</li>
-                    <li className='border-b-[1px]'>Order</li>
+                    <li className='mb-3'>Dashboard Home</li>
+                    <li className='mb-3'>Order</li>
+                    <li className='mb-3'>Transaction</li>
+                    <li className='mb-3'>Payment</li>
+                    <li className='mb-3'>Cancel Order</li>
                 </ul>
 
             </div>
