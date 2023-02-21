@@ -14,6 +14,8 @@ import Contact from "./pages/contact/Contact";
 import "leaflet/dist/leaflet.css";
 import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
+import ShopingCart from "./Components/ShopingCart/ShopingCart";
+import CheckoutProduct from "./Components/CheckoutProduct/CheckoutProduct";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/blog" element={<DynamicBlog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/viewCart" element={<ShopingCart />} />
+          <Route path="/checkout" element={<CheckoutProduct />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>

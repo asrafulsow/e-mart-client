@@ -6,6 +6,7 @@ import { EffectCube, Pagination, Autoplay } from "swiper";
 import 'swiper/css';
 import './banner.css'
 import { FcViewDetails, FcFlashOn, FcOrgUnit, FcMultipleDevices, FcWebcam, FcMultipleSmartphones, FcShop, FcSelfie } from "react-icons/fc";
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -103,7 +104,7 @@ const Banner = () => {
                 <p className='text-5xl font-bold my-4'>NEW <span className='text-blue-700'>MOBILE</span></p>
                 <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
                 <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-                <button className="btn btn-wide bg-primary-all my-9">Shop Now</button>
+                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
               <img className='box-border' src="https://i.ibb.co/NFYPH2F/slide1-electronic-1.png" height="80%" alt="" />
             </div>
@@ -116,7 +117,7 @@ const Banner = () => {
                 <p className='text-5xl font-bold my-4'>NEW <span className='text-blue-700'>LAPTOP</span></p>
                 <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
                 <p className='text-5xl font-bold'>12K <span className='font-normal'>VIDEO</span></p>
-                <button className="btn btn-wide bg-primary-all my-9">Wide</button>
+                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
               <img src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt="" />
             </div>
@@ -129,7 +130,7 @@ const Banner = () => {
                 <p className='text-5xl font-bold my-4 '>NEW <span className='text-blue-700'>CAMERA</span></p>
                 <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
                 <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-                <button className="btn btn-wide bg-primary-all my-9">Wide</button>
+                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
               <img src="https://i.ibb.co/FxYgbP4/slide3-electronic1.png" alt="" />
             </div>
