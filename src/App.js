@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home/Home";
@@ -12,6 +13,9 @@ import ShopPage from "./Components/ShopPage/ShopPage";
 import Contact from "./pages/contact/Contact";
 import "leaflet/dist/leaflet.css";
 import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
+import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
+import ShopingCart from "./Components/ShopingCart/ShopingCart";
+import CheckoutProduct from "./Components/CheckoutProduct/CheckoutProduct";
 
 function App() {
   return (
@@ -28,8 +32,10 @@ function App() {
           <Route path="/blog" element={<DynamicBlog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/viewCart" element={<ShopingCart />} />
+          <Route path="/checkout" element={<CheckoutProduct />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/*" element={<NotFound />} />
-
         </Routes>
       </BrowserRouter>
       <ToastContainer />

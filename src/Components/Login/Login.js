@@ -6,7 +6,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../firebase.config";
 
@@ -62,10 +62,10 @@ const Login = () => {
                 className="input input-bordered"
                 {...register("email", {
                   required: { value: true, message: " Email is required" },
-                  pattern: {
-                    value: /.+@.+\.[A-Za-z]+$/,
-                    message: "Provide a Valid Email",
-                  },
+                  // pattern: {
+                  //   value: /.+@.+\.[A-Za-z]+$/,
+                  //   message: "Provide a Valid Email",
+                  // },
                   onBlur: (e) => setEmail(e.target.value),
                 })}
               />
@@ -92,11 +92,11 @@ const Login = () => {
                 className="input input-bordered"
                 {...register("password", {
                   required: { value: true, message: " Password is required" },
-                  pattern: {
-                    value:
-                      /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/,
-                    message: "Your Password is wrong",
-                  },
+                  // pattern: {
+                  //   value:
+                  //     /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/,
+                  //   message: "Your Password is wrong",
+                  // },
                 })}
               />
               <label className="label">
@@ -123,6 +123,7 @@ const Login = () => {
               className="btn btn-accent w-full"
               value="Login"
             />
+            <ToastContainer limit={1}></ToastContainer>
           </form>
           <p>
             <small>
