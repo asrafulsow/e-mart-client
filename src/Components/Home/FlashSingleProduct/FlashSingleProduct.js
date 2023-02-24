@@ -1,17 +1,19 @@
 import { faCodeCompare, faFaceAngry, faFaceDizzy, faFaceSmile, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import QuickView from "../QuickView/QuickView";
 import Ratting from "../Ratting/Ratting";
 import "./FlashSingleProduct.css";
 
-const FlashSingleProduct = ({ image }) => {
+const FlashSingleProduct = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [view, setView] = useState(false);
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
-
+//  console.log(product)
   return (
+   <Link to={`/home/${product._id}`}>
     <div
       className="flex flex-col justify-center p-4  border"
       onMouseEnter={handleMouseEnter}
@@ -23,7 +25,7 @@ const FlashSingleProduct = ({ image }) => {
         className={`w-64 h-[200px] object-cover  rounded-lg transition-all duration-300 transform ${
           isHovered ? "scale-110" : ""
         }   ${isHovered ? "bg-red-200" : ""}`}
-        src={image}
+        src={product?.image}
         alt="Product"
       />
    {
@@ -61,6 +63,7 @@ const FlashSingleProduct = ({ image }) => {
         </span>
       </div>
     </div>
+   </Link>
   );
 };
 
