@@ -13,7 +13,7 @@ const FlashSingleProduct = ({ product }) => {
   const handleMouseLeave = () => setIsHovered(false);
 //  console.log(product)
   return (
-   <Link to={`/home/${product._id}`}>
+  
     <div
       className="flex flex-col justify-center p-4  border"
       onMouseEnter={handleMouseEnter}
@@ -24,7 +24,7 @@ const FlashSingleProduct = ({ product }) => {
    <img
         className={`w-64 h-[200px] object-cover  rounded-lg transition-all duration-300 transform ${
           isHovered ? "scale-110" : ""
-        }   ${isHovered ? "bg-red-200" : ""}`}
+        }   ${isHovered ? "bg-grey-200" : ""}`}
         src={product?.image}
         alt="Product"
       />
@@ -42,19 +42,44 @@ const FlashSingleProduct = ({ product }) => {
   </div>:''
    }
    </div>
-      
-      <h3 className="text-base font-medium mt-4 mb-2">
+   <Link to={`/home/${product._id}`}>
+      <h3 className="text-base font-medium mt-4 mb-2 hover:bg-rose-500 ">
         Simple Mobile 4G LTE Prepaid Smartphone
-      </h3>
+      </h3></Link>
       <Ratting />
       <p className="mt-2">
         <del className="text-gray-300">$150.00</del>
         <span className="text-red-600"> $129.00</span>
       </p>
       <div className="cart-footer space-x-2">
-        <span className="cursor-pointer text-xs font-bold hover:underline border">
-          ADD TO CART
+
+
+
+
+
+
+
+<span className="cursor-pointer text-xs font-bold hover:underline border">
+        <label for="my-modal-4" class="text-sm">add to cart</label>
         </span>
+<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+<label for="my-modal-4" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <h3 class="text-lg font-bold">add this to your cart!!</h3>
+    <div className="flex items-center">
+      <img src={product.image} className="w-1/4" alt="htis "></img>
+      <div>
+        New mobile phone for you 
+      </div>
+      <br/>
+      <p>300$</p>
+    </div>
+    <button className="btn btn-secondary mr-3">Add to cart </button>
+    <button className="btn btn-primary ml-3" >shop now </button>
+  </label>
+</label>
+
+        
         <span
           onClick={() => setView(true)}
           className="cursor-pointer text-xs font-bold hover:underline border"
@@ -63,7 +88,7 @@ const FlashSingleProduct = ({ product }) => {
         </span>
       </div>
     </div>
-   </Link>
+  
   );
 };
 

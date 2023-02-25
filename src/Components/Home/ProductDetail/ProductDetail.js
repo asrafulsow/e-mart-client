@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../../Shared/Footer/Footer';
 import FlashSale from '../FlashSale/FlashSale';
 import FlashSaleSingle from '../FlashSale/FlashsaleSingle';
 import SmartPhoneArea from '../SmartPhoneArea/SmartPhoneArea';
-
+import './productdetail.css'
 const ProductDetail = () => {
     const [products, setProducts] = useState([]);
+    const [number,setNumber]=useState(0)
   const [detail, setDetail] = useState([])
     let {singleProduct}=useParams()
    
@@ -26,7 +27,12 @@ useEffect(()=>{
     console.log(detail, 'this is from ami ')
 },[singleProduct, products]);
 
-
+const increase=()=>{
+  setNumber(number+1)
+}
+const decrease=()=>{
+  setNumber(number-1)
+}
 
     return (
         <div>
@@ -38,7 +44,7 @@ useEffect(()=>{
             <div class="flex flex-row">
   <div class="basis-1/2 p-10">
 
-    <img src={data?.image} alt='hello '></img>
+    <img src={data?.image} className="zoom" alt='hello '></img>
   </div>
   <div class="basis-1/2 p-10">
 
@@ -49,9 +55,10 @@ useEffect(()=>{
 <h1 className='text-3xl font-bold my-5'>price: $200</h1>
 
 
-  <button className="btn btn-md">-</button>  <input type="tel" name="" className="w-10 h-10 border-black" value="4"/> <button className="btn btn-md">+</button>
+  <button className="btn btn-md" onClick={decrease}>-</button>  <input type="tel" name="" className="w-10 h-10 border-black" value={number}/> <button className="btn btn-md" onClick={increase
+  }>+</button>
 
- <button className='btn btn-secondary ml-5'>Add to Cart </button> <button className='btn'>buy now </button>
+ <button className='btn btn-secondary ml-5'>Add to Cart </button> <Link to="/viewCart"><button className='btn'>buy now </button></Link>
  <br/>
  <button className='btn btn-xs'>wishlist</button>
  <button className='btn btn-xs'>compare</button>
