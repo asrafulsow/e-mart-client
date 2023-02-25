@@ -16,6 +16,7 @@ import DynamicBlog from "./pages/DynamicBlog/DynamicBlog";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
 import ShopingCart from "./Components/ShopingCart/ShopingCart";
 import CheckoutProduct from "./Components/CheckoutProduct/CheckoutProduct";
+import ProductDetail from "./Components/Home/ProductDetail/ProductDetail";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/home/:singleProduct" element={<ProductDetail />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<ShopPage />} />
