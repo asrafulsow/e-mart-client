@@ -1,0 +1,11 @@
+.hovereffect:hover{
+
+overflow: none;
+box-sizing: border-box;
+transform: scale(1.02);
+transition: 1s;
+
+}
+.hovereffect button :hover{
+    background-color:red;
+}

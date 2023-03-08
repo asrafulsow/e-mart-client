@@ -1,0 +1,66 @@
+.leaflet-container .leaflet-marker-pane img, .leaflet-container .leaflet-shadow-pane img, .leaflet-container .leaflet-tile-pane img, .leaflet-container img.leaflet-image-layer, .leaflet-container .leaflet-tile{
+    width:100px
+}
+.formcontainer{
+    background-color: rgb(51, 1, 97);
+    width: 80%;
+    color:black;
+    box-sizing: border-box;
+    height:410px;
+    border-radius: 10px;
+    padding:10px;
+}
+.formcontainer input{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    width: 85%;
+    position: relative;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.formcontainer textarea{
+    width: 85%;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align:center;
+}
+.formcontainer button{
+    width: 85%;
+    color:white;
+    border-radius: 5px;
+    background-color: rgb(219, 90, 67);
+    height: 50px;
+    margin-top: 10px;
+}
+.fontcontainer{
+    text-align: left;
+    padding: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.fontcontainer h4{
+    font-weight: 700;
+
+}
+.fontcontainer h1{
+    color:rgb(0, 0, 0);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.fontcontainer p {
+    font-weight: normal;
+
+}
+.fonts{
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.font{
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contactdiv{
+    padding:50px;
+}
