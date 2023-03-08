@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import RecentView from "../RecentView/RecentView";
@@ -25,6 +25,17 @@ const Navbar = () => {
       </li>
     </>
   );
+
+
+  // fetch product
+  const [recentViews, setRecentView] = useState([])
+
+  useEffect(() => {
+    fetch("https://emart-xcpi.onrender.com/products")
+      .then(res => res.json())
+      .then(data => setRecentView(data))
+  }, [])
+
   return (
     <div className="container mx-auto px-4 bg-primary-all box-shadow">
       <div className="navbar text-white">
@@ -74,11 +85,9 @@ const Navbar = () => {
                   </svg>
                 </a>
                 <ul className="p-2 text-black bg-white border h-[400px] z-20 w-[360px] text-left overflow-x-hidden">
-                  <RecentView />
-                  <RecentView />
-                  <RecentView />
-                  <RecentView />
-                  <RecentView />
+                  {
+                    recentViews?.slice(0, 5).map((singleView) => <RecentView key={singleView._id} singleView={singleView} />)
+                  }
                 </ul>
               </li>
             </ul>
