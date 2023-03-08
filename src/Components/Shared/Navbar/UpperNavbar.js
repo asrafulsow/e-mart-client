@@ -25,7 +25,7 @@ import { coolGray } from "tailwindcss/colors";
 const UpperNavbar = () => {
   const [user] = useAuthState(auth);
   const [signOut, loading, error] = useSignOut(auth);
-  console.log(user);
+  // console.log(user);
   const [signInWithEmailAndPassword, eUser, eLoading, eError] =
     useSignInWithEmailAndPassword(auth);
   const {

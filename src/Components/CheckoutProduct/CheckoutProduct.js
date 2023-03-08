@@ -4,9 +4,9 @@ const CheckoutProduct = () => {
     return (
         <div className='bg-[#eff6fd]'>
             <div className="billing-details-area w-[90%] mx-auto pt-10 pb-10">
-                <div class="grid grid-cols-4 grid-flow-col gap-4">
+                <div class="grid md:grid-cols-4 grid-cols-1 md:grid-flow-col gap-4">
                     {/* Checkout form start */}
-                    <div className='col-span-3'>
+                    <div className='md:col-span-3'>
                         <form action="#" method="POST">
                             <div className="overflow-hidden shadow sm:rounded-md">
                                 <div className="bg-white px-4 py-5 sm:p-6">
@@ -139,7 +139,7 @@ const CheckoutProduct = () => {
                         </form>
                     </div>
                     {/* confirm order area */}
-                    <div className='col-span-1 bg-white p-5'>
+                    <div className='md:col-span-1 bg-white p-5'>
                         <div className="place-order-area  space-y-7">
                             <h3 className='text-2xl font-bold mt-7'>Your Order</h3>
                             <div className="shipping text-lg flex justify-between items-center">

@@ -1,7 +1,7 @@
 import React from 'react';
 import infoBanner3 from "../../../imagess/cover.jpg"
 import laptop from "../../../imagess/laptop.jpg"
-import './Bannerinfo.css'
+
 const BannerInfo = () => {
     const bannerbg = {
         background: `url(${infoBanner3})`,
@@ -10,7 +10,6 @@ const BannerInfo = () => {
         backgroundRepeat: 'norepeat',
         backgroundColor: 'rgba(45,58,74,0.5)',
     }
-
     const laptopbg = {
         background: `url(${laptop})`,
         backgroundSize: 'cover',
@@ -21,7 +20,7 @@ const BannerInfo = () => {
     return (
         <div className='p-10'>
             <div className="top-info-area">
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className='flex justify-center items-center'>
                         <div className="top-info-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-5">
@@ -78,25 +77,22 @@ const BannerInfo = () => {
                     </div>
                 </div>
             </div>
-
-             {/* the other part of this section contained two products information  */}
-
             <div className="bottom-info-area pt-10 pb-10">
                 <div className="info-banner w-11/12 mx-auto">
-                    <div className="grid grid-cols-2 gap-3  ">
-                        <div style={bannerbg} className="hovereffect">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div style={bannerbg}>
                             <div className="inf-content space-y-3 px-[60px] py-[40px]">
                                 <h5 className='text-red-700 font-bold'>NEW ARRIVALS</h5>
-                                <h2 className='text-5xl font-bold text-white leading-[60px]'>ON SALE NOW <br /> BLACK FRIDAY</h2>
-                                <button className='btn bg-white text-black'>Shop Now</button>
+                                <h2 className='md:text-5xl text-2xl font-bold text-white md:leading-[60px] leading-[35px]'>ON SALE NOW <br /> BLACK FRIDAY</h2>
+                                <button className='md:btn md:bg-white md:text-black bg-white p-2 text-black rounded'>Shop Now</button>
                             </div>
                         </div>
                         <div>
-                            <div style={laptopbg} className="hovereffect">
+                            <div style={laptopbg}>
                                 <div className="inf-content space-y-3 px-[60px] py-[40px]">
                                     <h5 className='text-red-700 font-bold'>NEW ARRIVALS</h5>
-                                    <h2 className='text-5xl font-bold text-white leading-[60px]'>BEST PRODUCT IN <br /> BEST PRICES</h2>
-                                    <button className='btn bg-white text-black'>Shop Now</button>
+                                    <h2 className='md:text-5xl text-2xl font-bold text-white md:leading-[60px] leading-[35px]'>BEST PRODUCT IN <br /> BEST PRICES</h2>
+                                    <button className='md:btn md:bg-white md:text-black bg-white p-2 text-black rounded'>Shop Now</button>
                                 </div>
                             </div>
                         </div>
