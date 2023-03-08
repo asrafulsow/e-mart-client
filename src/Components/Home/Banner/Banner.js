@@ -13,7 +13,7 @@ const Banner = () => {
     <>
       <div className=" flex justify-center flex-row h-1/4 overflow-hidden pb-5 pt-5 pr-10 w-[90%] mx-auto">
         {/* the first hover with navigation part will be here  */}
-        <div className=' divide-y divide-gray-300 bg-[#eff6fd] w-1/4 mx-auto p-5'>
+        <div className=' divide-y divide-gray-300 bg-[#eff6fd] w-1/4 mx-auto p-5 hidden md:block'>
           {/* banner category area */}
           <h2 className='text-xl font-bold mb-5'>Categoriess</h2>
           <div className="all-category-area space-y-5 font-bold text-base mt-5 list-none cursor-pointer pt-5">
@@ -79,7 +79,7 @@ const Banner = () => {
         </div>
 
         {/* and this is the caruousel part  */}
-        <Swiper className="w-3/4 h-1/2 basis-3/4 float-right	"
+        <Swiper className="md:w-3/4 md:h-1/2 md:basis-3/4 md:float-right	"
           effect={"cube"}
           rewind={true}
           navigation={true}
@@ -101,12 +101,12 @@ const Banner = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
               <div>
-                <p className='text-5xl font-bold my-4'>NEW <span className='text-blue-700'>MOBILE</span></p>
-                <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-                <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
+                <p className='md:text-5xl text-2xl font-bold my-4'>NEW <span className='text-blue-700'>MOBILE</span></p>
+                <p className='md:text-5xl text-2xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+                <p className='md:text-5xl text-2xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
+                <Link to="/shop"><button className="btn md:btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
-              <img className='box-border' src="https://i.ibb.co/NFYPH2F/slide1-electronic-1.png" height="80%" alt="" />
+              <img className='box-border md:h-[80%] h-20% w-1/2' src="https://i.ibb.co/NFYPH2F/slide1-electronic-1.png" alt="" />
             </div>
 
           </SwiperSlide>
@@ -114,12 +114,12 @@ const Banner = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
               <div>
-                <p className='text-5xl font-bold my-4'>NEW <span className='text-blue-700'>LAPTOP</span></p>
-                <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-                <p className='text-5xl font-bold'>12K <span className='font-normal'>VIDEO</span></p>
-                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
+                <p className='md:text-5xl text-2xl font-bold my-4'>NEW <span className='text-blue-700'>LAPTOP</span></p>
+                <p className='md:text-5xl text-2xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+                <p className='md:text-5xl text-2xl font-bold'>12K <span className='font-normal'>VIDEO</span></p>
+                <Link to="/shop"><button className="btn md:btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
-              <img src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt="" />
+              <img className='box-border md:h-[80%] h-20% w-1/2' src="https://i.ibb.co/mFPtbbf/slide2-electronic1.png" alt="" />
             </div>
 
           </SwiperSlide>
@@ -127,12 +127,12 @@ const Banner = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
               <div>
-                <p className='text-5xl font-bold my-4 '>NEW <span className='text-blue-700'>CAMERA</span></p>
-                <p className='text-5xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
-                <p className='text-5xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
-                <Link to="/shop"><button className="btn btn-wide bg-primary-all my-9">Shop Now</button></Link>
+                <p className='md:text-5xl text-2xl font-bold my-4 '>NEW <span className='text-blue-700'>CAMERA</span></p>
+                <p className='md:text-5xl text-2xl font-bold my-4'>12MP <span className='font-normal'>F/2.3</span></p>
+                <p className='md:text-5xl text-2xl font-bold'>8K <span className='font-normal'>VIDEO</span></p>
+                <Link to="/shop"><button className="btn md:btn-wide bg-primary-all my-9">Shop Now</button></Link>
               </div>
-              <img src="https://i.ibb.co/FxYgbP4/slide3-electronic1.png" alt="" />
+              <img className='box-border md:h-[80%] h-20% w-1/2' src="https://i.ibb.co/FxYgbP4/slide3-electronic1.png" alt="" />
             </div>
 
           </SwiperSlide>
