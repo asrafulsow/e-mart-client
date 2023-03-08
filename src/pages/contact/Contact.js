@@ -100,28 +100,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <MapContainer
-        style={{
-          height: "600px",
-          backgroundColor: "red",
-          marginTop: "80px",
-          width: "100%",
-          marginBottom: "90px",
-        }}
-        center={[51.505, -0.09]}
-        zoom={13}
-        scrollWheelZoom={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker icon={myIcon} position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
+      <iframe title="google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17487.52967100933!2d91.0890171137693!3d22.865364320569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754a4f23cebfcd9%3A0xb70c7ea857f0747e!2sNoakhali%20General%20Hospital!5e0!3m2!1sen!2sbd!4v1676815066338!5m2!1sen!2sbd" width='100%' height="600" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
     </div>
   );
 };
