@@ -224,17 +224,7 @@ const UpperNavbar = () => {
       {/* add to cart area end */}
       <div className="container mx-auto p-4">
         <div className="navbar text-black">
-          <div className="navbar-start w-[28%]">
-            <a
-              href="#"
-              className="btn btn-ghost normal-case text-xl xs:hidden"
-            />
-
-            <a
-              href="/"
-              className="btn btn-ghost normal-case text-xl xs:hidden"
-            />
-
+          <div className="navbar-start w-[28%] hidden md:block">
             <img style={{ height: "30px" }} src={logo} alt="logo" />
           </div>
           <div className="navbar-center">
@@ -249,7 +239,7 @@ const UpperNavbar = () => {
                   <input
                     type="text"
                     placeholder="Find Product by Category,name etc..."
-                    className="input input-bordered w-[40rem] pl-[70px] rounded-full"
+                    className="input input-bordered w-[15rem] md:w-[40rem] pl-[70px] rounded-full"
                   />
                 </div>
               </form>

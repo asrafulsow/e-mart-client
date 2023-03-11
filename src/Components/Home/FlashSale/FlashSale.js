@@ -41,7 +41,7 @@ const FlashSale = () => {
       .get(`https://emart-xcpi.onrender.com/products`)
       .then((res) => setProducts(res.data));
   }, []);
-console.log(products,'from flashsale')
+  console.log(products, 'from flashsale')
   return (
     <div>
       <div className="flashsale-area w-11/12 mx-auto pb-10">
@@ -66,14 +66,9 @@ console.log(products,'from flashsale')
                   product.category === "camera" ||
                   product.category === "headphone"
               )
-              .map((product) => ( 
+              .map((product) => (
                 <FlashSingleProduct product={product} key={product?._id} />
               ))}
-            {/* <FlashSingleProduct image={productImage} />
-            <FlashSingleProduct image={headphone} />
-            <FlashSingleProduct image={tv} />
-            <FlashSingleProduct image={oven} />
-            <FlashSingleProduct image={productImage2} /> */}
           </div>
         </div>
       </div>
