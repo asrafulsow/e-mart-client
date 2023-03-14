@@ -13,9 +13,9 @@ const ShopingCart = () => {
                     </div>
                     {/* top heading end */}
                     <div className="cart-item-area">
-                        <div class="grid grid-cols-6 gap-4">
+                        <div class="grid md:grid-cols-6 grid-cols-1 gap-4">
                             {/* cart -product area */}
-                            <div className='col-span-4'>
+                            <div className='md:col-span-4'>
                                 <SingleCartProduct />
                                 <SingleCartProduct />
                             </div>

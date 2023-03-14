@@ -50,8 +50,8 @@ const HomeAppliances = () => {
         </div>
         {/* smart phone section bottom product area */}
         <div className="bottom-product-area">
-          <div className="grid grid-cols-6 gap-4">
-            <div className="row-span-2">
+          <div className="grid md:grid-cols-6 gap-1 md:gap-4">
+            <div className="md:row-span-2 hidden md:block">
               <img
                 className="h-[820px]"
                 src={coverProduct1}
@@ -59,7 +59,7 @@ const HomeAppliances = () => {
               />
             </div>
             <div className="col-span-4">
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
                 {products
                   ?.filter(
                     (product) =>
@@ -69,18 +69,9 @@ const HomeAppliances = () => {
                   .map((product) => (
                     <FlashSingleProduct product={product} key={product?._id} />
                   ))}
-
-                {/* <FlashSingleProduct image={homeProduct} />
-                                <FlashSingleProduct image={homeProduct1} />
-                                <FlashSingleProduct image={homeProduct2} />
-                                <FlashSingleProduct image={homeProduct3} />
-                                <FlashSingleProduct image={homeProduct4} />
-                                <FlashSingleProduct image={homeProduct5} />
-                                <FlashSingleProduct image={homeProduct6} />
-                                <FlashSingleProduct image={homeProduct7} /> */}
               </div>
             </div>
-            <div className=" p-5">
+            <div className=" p-5 hidden md:block">
               {mobileItemList.map((itemList) => (
                 <p
                   key={itemList}
