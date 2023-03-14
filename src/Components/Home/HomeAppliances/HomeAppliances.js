@@ -53,7 +53,7 @@ const HomeAppliances = () => {
           <div className="grid md:grid-cols-6 gap-1 md:gap-4">
             <div className="md:row-span-2 hidden md:block">
               <img
-                className="h-[820px]"
+                className="md:h-[820px]"
                 src={coverProduct1}
                 alt="Cover Product"
               />
