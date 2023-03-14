@@ -4,52 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SinglePost from "./SinglePost";
 
-// const posts = [
-//   {
-//     title: "Ultra-Thin Laptop Rentals and Rivalry",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis.",
-//     image:
-//       "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-2.jpg",
-//     link: "#",
-//     author: "John",
-//     date: "MAY 6, 2021",
-//     comments: 4,
-//   },
-//   {
-//     title: "How to Tag Faces in the Android Gallery",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis.",
-//     image:
-//       "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-1.jpg",
-//     link: "#",
-//     author: "Jane",
-//     date: "MAY 23, 2021",
-//     comments: 2,
-//   },
-//   {
-//     title: "The New Sony Solo Cinematic Dream",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis.",
-//     image:
-//       "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-4.jpg",
-//     link: "#",
-//     author: "Smith",
-//     date: "MAY 6, 2021",
-//     comments: 0,
-//   },
-//   {
-//     title: "The Best Smartphone: Top Expert Picks",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis.",
-//     image:
-//       "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2021/03/blog-8.jpg",
-//     link: "#",
-//     author: "John",
-//     date: "MAY 6, 2021",
-//     comments: 4,
-//   },
-// ];
+
 
 function PopularPostContainer() {
   // to set how many slides should be shown
@@ -81,7 +36,8 @@ function PopularPostContainer() {
       >
         {posts?.map((post) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={post._id}>
+
               <SinglePost post={post} />
             </SwiperSlide>
           );

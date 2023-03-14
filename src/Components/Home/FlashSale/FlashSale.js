@@ -41,7 +41,7 @@ const FlashSale = () => {
       .get(`https://emart-xcpi.onrender.com/products`)
       .then((res) => setProducts(res.data));
   }, []);
-  console.log(products, 'from flashsale')
+  // console.log(products, 'from flashsale')
   return (
     <div>
       <div className="flashsale-area w-11/12 mx-auto pb-10">

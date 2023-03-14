@@ -50,12 +50,12 @@ const GamesProduct = () => {
         </div>
         {/* smart phone section bottom product area */}
         <div className="bottom-product-area">
-          <div className="grid grid-cols-6 gap-4">
-            <div className="row-span-2">
+          <div className="grid md:grid-cols-6 gap-1 md:gap-4">
+            <div className="md:row-span-2 hidden md:block">
               <img className="h-[820px]" src={coverProduct} alt="" />
             </div>
             <div className="col-span-4">
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
                 {products
                   ?.filter(
                     (product) =>
@@ -65,18 +65,9 @@ const GamesProduct = () => {
                   .map((product) => (
                     <FlashSingleProduct product={product} key={product?._id} />
                   ))}
-
-                {/* <FlashSingleProduct image={productMobile} />
-                <FlashSingleProduct image={productMobile1} />
-                <FlashSingleProduct image={productMobile2} />
-                <FlashSingleProduct image={productMobile3} />
-                <FlashSingleProduct image={productMobile4} />
-                <FlashSingleProduct image={productMobile5} />
-                <FlashSingleProduct image={productMobile6} />
-                <FlashSingleProduct image={productMobile7} /> */}
               </div>
             </div>
-            <div className=" p-5">
+            <div className=" p-5 hidden md:block">
               {mobileItemList.map((itemList) => (
                 <p
                   key={itemList}
