@@ -47,8 +47,8 @@ const Login = () => {
     toast("User Logged in successfully");
   }
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className="card w-2/5 bg-base-100 ">
+    <div className="flex justify-center items-center h-full mt-5">
+      <div className="card w-2/5 bg-base-100 mt-[20px]">
         <div className="card-body">
           <h2 className="text-start text-2xl font-bold">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>

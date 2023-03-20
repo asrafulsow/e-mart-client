@@ -121,7 +121,7 @@ const UpperNavbar = () => {
     <div>
       {/* add to cart section  */}
       {showCart ? (
-        <section className="fixed top-0 right-0 w-screen h-screen z-[999]">
+        <section className="fixed top-0 right-0 md:w-screen w-[100%] h-screen z-[999]">
           <div className="w-full h-full relative">
             <div
               onClick={() => {

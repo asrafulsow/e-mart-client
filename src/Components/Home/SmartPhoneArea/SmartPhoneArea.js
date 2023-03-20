@@ -61,17 +61,9 @@ const SmartPhoneArea = () => {
                   .map((product) => (
                     <FlashSingleProduct product={product} key={product?._id} />
                   ))}
-                {/* <FlashSingleProduct image={productMobile} />
-                <FlashSingleProduct image={productMobile1} />
-                <FlashSingleProduct image={productMobile2} />
-                <FlashSingleProduct image={productMobile3} />
-                <FlashSingleProduct image={productMobile4} />
-                <FlashSingleProduct image={productMobile5} />
-                <FlashSingleProduct image={productMobile6} />
-                <FlashSingleProduct image={productMobile7} /> */}
               </div>
             </div>
-            <div className=" p-5">
+            <div className=" p-5 hidden md:block">
               {mobileItemList.map((itemList) => (
                 <p
                   key={itemList}

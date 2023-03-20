@@ -15,7 +15,7 @@ const SingleCartProduct = () => {
         <div>
             {/* single cart product start */}
             <div className="overflow-x-auto w-full">
-                <table className="table w-full h-[200px]">
+                <table className="table w-full md:h-[200px]">
                     {/* table headding start */}
                     <thead>
                         <tr>
