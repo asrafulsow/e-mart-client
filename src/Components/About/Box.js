@@ -15,7 +15,7 @@ const Box = ({ title, img }) => {
             elit pellentesque..
           </p>
           <p className="font-bold py-5 flex items-center text-sm">
-            <span className="pr-2">VIEW MORE </span>
+            <span className="pr-2 cursor-pointer">VIEW MORE </span>
             <FaLongArrowAltRight />
           </p>
         </div>
