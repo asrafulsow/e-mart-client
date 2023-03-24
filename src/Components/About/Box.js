@@ -3,11 +3,11 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Box = ({ title, img }) => {
   return (
-    <div className="flex flex-column justify-between my-8">
+    <div className="md:flex md:flex-column justify-between my-8 ">
       <div className="left flex items-center">
         <div>
-          <button className="btn btn-error">who are we?</button>
-          <h2 className="font-bold text-3xl text-black py-5">{title}</h2>
+          <button className="md:btn md:btn-error p-3 font-bold bg-red-400 rounded">who are we?</button>
+          <h2 className="font-bold md:text-3xl text-xl text-black py-5">{title}</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam{" "}
             <br /> eros ipsum, vitae aliquam quam eleifend at. Sed iaculis amet
