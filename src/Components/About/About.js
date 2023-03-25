@@ -50,7 +50,7 @@ const About = () => {
   ];
   return (
     <div>
-      <div className="container mx-auto my-10">
+      <div className="container mx-auto my-10 w-[85%]">
         <Box
           title="SEARCH, SELECT, BUY ONLINE"
           img="https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2021/04/img1-about-us.jpg"

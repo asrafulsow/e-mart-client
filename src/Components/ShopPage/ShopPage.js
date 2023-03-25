@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AllShopProducts from './AllShopProducts';
 
 const ShopPage = () => {
@@ -31,7 +32,7 @@ const ShopPage = () => {
                     <div className="text-sm breadcrumbs w-11/12 mx-auto pb-10 p-5">
                         <p className='text-xl font-bold pb-5'>Shop Page</p>
                         <ul>
-                            <li><a>Home</a></li>
+                            <Link to="/"><li className='mr-5 hover:underline'>Home</li></Link>
                             <li><a>Shop Page</a></li>
                         </ul>
                     </div>
