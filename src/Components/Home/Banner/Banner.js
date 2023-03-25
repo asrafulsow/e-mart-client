@@ -25,55 +25,55 @@ const Banner = () => {
               <span>All Categories</span>
             </li>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcFlashOn className='w-full h-[20px]' />
               </div>
               <span>Top Offers</span>
-            </li>
+            </Link>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcOrgUnit className='w-full h-[20px]' />
               </div>
               <span>Games & Accessoris</span>
-            </li>
+            </Link>
             <li></li>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcMultipleSmartphones className='w-full h-[20px]' />
               </div>
               <span> Phone & Tablet</span>
-            </li>
+            </Link>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcMultipleDevices className='w-full h-[20px]' />
               </div>
               <span>Computer & Laptop</span>
-            </li>
+            </Link>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcSelfie className='w-full h-[20px]' />
               </div>
               <span>Jewlery & Beauty</span>
-            </li>
+            </Link>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcShop className='w-full h-[20px]' />
               </div>
               <span>Fashion</span>
-            </li>
+            </Link>
             {/* single catagory */}
-            <li className='flex items-center'>
+            <Link to="/shop" className='flex items-center'>
               <div className='rounded-full p-[10px] bg-slate-300 mr-3'>
                 <FcWebcam className='w-full h-[20px]' />
               </div>
               <span>Web & Camera</span>
-            </li>
+            </Link>
           </div>
           {/* banner category area */}
         </div>
