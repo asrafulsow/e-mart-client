@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
 import coverProduct from "../../../imagess/coverProduct.png";
 import FlashSingleProduct from "../FlashSingleProduct/FlashSingleProduct";
-// import productMobile from "../../../imagess/mobile-product.png";
-// import productMobile1 from "../../../imagess/mobile-product1.png";
-// import productMobile2 from "../../../imagess/mobile-product2.png";
-// import productMobile3 from "../../../imagess/mobile-product3.png";
-// import productMobile4 from "../../../imagess/mobile-product4.png";
-// import productMobile5 from "../../../imagess/mobile-product5.png";
-// import productMobile6 from "../../../imagess/mobile-product6.png";
-// import productMobile7 from "../../../imagess/mobile-product7.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const SmartPhoneArea = () => {
   const mobileItemList = [
     "Iphone",
@@ -63,16 +56,18 @@ const SmartPhoneArea = () => {
                   ))}
               </div>
             </div>
-            <div className=" p-5 hidden md:block">
-              {mobileItemList.map((itemList) => (
-                <p
-                  key={itemList}
-                  className="p-2 cursor-pointer hover:text-red-600 font-medium text-gray-700"
-                >
-                  {itemList}
-                </p>
-              ))}
-            </div>
+            <Link to="/shop">
+              <div className=" p-5 hidden md:block">
+                {mobileItemList.map((itemList) => (
+                  <p
+                    key={itemList}
+                    className="p-2 cursor-pointer hover:text-red-600 font-medium text-gray-700"
+                  >
+                    {itemList}
+                  </p>
+                ))}
+              </div>
+            </Link>
           </div>
         </div>
       </div>
