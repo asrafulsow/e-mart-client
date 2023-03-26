@@ -143,7 +143,7 @@ const ShopPage = () => {
                             <div className="price-catagory-filter-area">
                                 <h3 className='text-base font-bold pb-8 pt-5'>Price</h3>
                                 <div className="price-range-content">
-                                    <input type="range" min="0" max="100" value="25" className="range" step="25" />
+                                    <input type="range" min="0" max="100" value="50" className="range h-[1rem] p-3" step="25" />
                                     <div className="w-full flex justify-between text-xs px-2">
                                         <span>|</span>
                                         <span>|</span>
@@ -153,7 +153,7 @@ const ShopPage = () => {
                                     </div>
                                     <div className="bottom-price-range-content flex justify-between pt-4">
                                         <p className=''>price: $10 - $1000</p>
-                                        <p className='underline font-bold'>Filter</p>
+                                        <p className='underline font-bold cursor-pointer'>Filter</p>
                                     </div>
                                 </div>
                             </div>
