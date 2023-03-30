@@ -249,7 +249,7 @@ const UpperNavbar = () => {
             <NavLink
               to="/login"
             >
-              {user ? <span className="hidden">Login</span> : <button className="visible text-base font-semibold mr-5 border p-2 rounded-lg border-slate-300">Login</button>}
+              {user ? <span className="hidden">Login</span> : <button className="visible text-base font-semibold md:mr-5 border p-2 rounded-lg border-slate-300">Login</button>}
             </NavLink>
             {user && <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost border rounded-full border-slate-300 btn-circle avatar">
@@ -277,7 +277,7 @@ const UpperNavbar = () => {
               </ul>
             </div>}
             {user && (
-              <div className="dropdown dropdown-hover">
+              <div className="dropdown dropdown-hover md:hidden block">
                 <label tabIndex={0} className="btn btn-ghost m-1">
                   <span className="text-sm">{user?.displayName}</span>
                 </label>
