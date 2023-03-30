@@ -24,6 +24,9 @@ const ShopPage = () => {
             .then(data => setProducts(data))
     }, [])
     console.log(products);
+
+
+
     return (
         <div>
             {/* top shop page area just breadcumb */}
