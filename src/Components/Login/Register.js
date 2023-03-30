@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   useCreateUserWithEmailAndPassword,
-  useSendEmailVerification,
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
@@ -12,8 +11,8 @@ import auth from "../../firebase.config";
 import Loading from "../Shared/Loading/Loading";
 
 const Register = () => {
-  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-  const [createUserWithEmailAndPassword, cUser, cLoading, cError] =
+  const [signInWithGoogle, gLoading, gError] = useSignInWithGoogle(auth);
+  const [createUserWithEmailAndPassword, cLoading, cError] =
     useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, pUpdating, pError] = useUpdateProfile(auth);
   const {
@@ -39,8 +38,8 @@ const Register = () => {
     return <Loading />;
   }
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className="card w-2/5 bg-base-100">
+    <div className="md:flex md:justify-center md:items-center h-full">
+      <div className="card md:w-2/5 bg-base-100 mt-4 md:mt-0">
         <div className="card-body">
           <h2 className="text-start text-2xl font-bold">Register</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
