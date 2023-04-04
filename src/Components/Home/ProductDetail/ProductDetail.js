@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../../Shared/Footer/Footer';
 import FlashSaleSingle from '../FlashSale/FlashsaleSingle';
 import Ratting from "../Ratting/Ratting"
@@ -45,7 +45,7 @@ const ProductDetail = () => {
 
               <img src={data?.image} alt='hello '></img>
             </div>
-            <div class="basis-1/2 p-10">
+            <div class="basis-1/2 p-10 md:mt-14">
 
               <h1 className="font-bold uppercase">{data.category} </h1>
               <h1 className="text-4xl font-bold my-4" >{data.name}</h1>
@@ -62,13 +62,14 @@ const ProductDetail = () => {
                 type="number"
                 value={quantity}
                 className="w-12 text-center py-2 border-r border border-gray-600"
-                min="1"
+                maxLength={5}
               />
               <button onClick={handleIncrease} className="px-4 py-2 border rounded-r-2xl  border-gray-600">
                 +
               </button>
 
-              <button className='btn btn-secondary ml-5'>Add to Cart </button> <button className='btn'>buy now </button>
+              <button className='btn bg-primary-all ml-5 mr-4'>Add to Cart </button>
+              <Link to="/checkout"><button className='btn'>buy now </button></Link>
               <br />
 
               <div class="divider mt-5"></div>
