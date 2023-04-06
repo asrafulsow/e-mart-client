@@ -19,7 +19,7 @@ const FlashSingleProduct = ({ product }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <QuickView view={view} setView={setView}></QuickView>
+      <QuickView to={`/home/${product._id}`} view={view} setView={setView}></QuickView>
       <Link to={`/home/${product._id}`}>
         <div className="imgi">
           <img

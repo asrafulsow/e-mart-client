@@ -15,19 +15,17 @@ const QuickView = (props) => {
     const [mainimage, setMainimage] = useState(product.images[0])
     const [quantity, setQuantity] = useState(1);
 
-    const { view, setView } = props;
+
+
+    const { view, setView, image } = props;
     return (
         <div className={`fixed w-full h-[100vh] top-0 left-0 ${view ? 'block' : 'hidden'} z-10`} style={{ backgroundColor: "rgba(63, 60, 61, 0.6)" }}>
             <div className="flex w-[100vw] h-[100vh] justify-center items-center">
                 <div className="box flex bg-white p-5 w-[60vw] rounded-lg">
                     <div className="image-container flex flex-col w-[50%]">
-                        <img src={mainimage} alt="product" className='h-[70vh] border mb-2' />
+                        <img src={image} alt="product" className='h-[70vh] border mb-2' />
                         <div className="thumbs flex flex-row overflow-x-auto">
-                            {
-                                product.images.map((image) => {
-                                    return <img key={image} src={image} alt="" className="h-[50px] border mr-2 hover:border-2 hover:border-black transition duration-300" onClick={() => setMainimage(image)} />
-                                })
-                            }
+                            <img src={image} alt="" className="h-[50px] border mr-2 hover:border-2 hover:border-black transition duration-300" />
                         </div>
                     </div>
                     <div className="info-container text-right pl-[35px] w-[50%]">
